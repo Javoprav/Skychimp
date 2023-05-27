@@ -1,0 +1,31 @@
+{% extends 'main/base.html' %} <!-- Выводит базовый html (верхняя, базовая часть сайта) -->
+
+{% block content %}  <!-- ШАБЛОННЫЙ ТЕГ for content -->
+    <main>
+        <div class="row row-cols-1 row-cols-md-3 mb-3 text-center">
+            {% for object in object_list %}
+                <div class="col">
+                    <div class="card mb-4 rounded-3 shadow-sm">
+                        <div class="card-header py-3">
+                            <h5 class="my-0 fw-normal">{{ object.name }}</h5>
+                        </div>
+                        <div class="card-body">
+                            {% if object.price %}
+                                <h6 class="card-title pricing-card-title">{{ object.price }} руб.</h6>
+                            {% else %}
+                                <h9 class="card-title pricing-card-title text-muted">не указана</h9>
+                            {% endif %}
+                            <ul class="list-unstyled mt-3 mb-4">
+                                <li>новая</li>
+                                <li>не дорого</li>
+                                <li>Email support</li>
+                                <li>Help center access</li>
+                            </ul>
+                            <a href="{% url 'main:boat_view' object.pk %}" type="button" class="w-100 btn btn-lg btn-outline-primary">Информация</a>
+                        </div>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    </main>
+{% endblock %}   <!-- закрытие ШАБЛОННЫЙ ТЕГ for content -->

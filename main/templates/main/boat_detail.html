@@ -1,0 +1,38 @@
+{% extends 'main/base.html' %} <!-- Выводит базовый html (верхняя, базовая часть сайта) -->
+
+{% block content %}
+    <div class="card">
+        <div class="card-header">{{ object.name }}</div>
+        <div class="card-body">
+            <table class="table table-striped">
+                <tr>
+                    <th>Начало</th>
+                    <th>Окончание</th>
+                    <th>Владелец</th>
+                </tr>
+                {% for history_item in object.boathistory_set.all %}
+                    <tr>
+                        <th>{{ history_item.start_year }}</th>
+                        <th>
+                            {% if history_item.stop_year %}
+                                {{ history_item.stop_year }}
+                            {% else %}
+                                по настоящее время
+                            {% endif %}
+                        </th>
+                        <th>
+                            {% if history_item.owner %}
+                                {{ history_item.owner }}
+                            {% else %}
+                                не указан
+                            {% endif %}
+                        </th>
+                    </tr>
+                {% endfor %}
+            </table>
+        </div>
+        <div class="card-footer">
+            <a href="{% url 'order:create' object.pk %}" type="button" class="w-100 btn btn-lg btn-outline-primary">Оставить заявку</a>
+        </div>
+    </div>
+{% endblock %}
