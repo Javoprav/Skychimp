@@ -1,6 +1,6 @@
 from django.shortcuts import render
 from django.views.generic import ListView, DetailView
-from models import Customer
+from main.models import Customer
 
 
 class CustomerListView(ListView):

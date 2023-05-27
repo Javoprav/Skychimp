@@ -10,18 +10,13 @@
                             <h5 class="my-0 fw-normal">{{ object.name }}</h5>
                         </div>
                         <div class="card-body">
-                            {% if object.price %}
-                                <h6 class="card-title pricing-card-title">{{ object.price }} руб.</h6>
-                            {% else %}
-                                <h9 class="card-title pricing-card-title text-muted">не указана</h9>
-                            {% endif %}
+                            <h6 class="card-title pricing-card-title">{{ object.email }}</h6>
+
                             <ul class="list-unstyled mt-3 mb-4">
-                                <li>новая</li>
-                                <li>не дорого</li>
-                                <li>Email support</li>
-                                <li>Help center access</li>
+                                <li class="card-title pricing-card-title">{{ object.message }}</li>
                             </ul>
-                            <a href="{% url 'main:boat_view' object.pk %}" type="button" class="w-100 btn btn-lg btn-outline-primary">Информация</a>
+                            <a href="{% url 'main:customer_view' object.pk %}" type="button"
+                               class="w-100 btn btn-lg btn-outline-primary">Информация</a>
                         </div>
                     </div>
                 </div>
