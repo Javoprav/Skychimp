@@ -1,19 +1,19 @@
 {% extends 'main/base.html' %} <!-- Выводит базовый html (верхняя, базовая часть сайта) -->
-{% load mediapath %}
+
 {% block content %}  <!-- ШАБЛОННЫЙ ТЕГ for content -->
     margin: 40px;
     <div class="col">
         margin: 40px;
         <div class="card">
             <div class="card-body">
-                <form method="post">
-                    {% csrf_token %}
-                    Уверены что хотите удалить запись "{{ object }}"?<br> <br> <!-- <br> отступ -->
-                    <input type="submit" class="btn btn-outline-danger" value="Уверен">   <!-- ШАБЛОННЫЙ ТЕГ Условия -->
+                <form action="" enctype="multipart/form-data" method="post">{% csrf_token %}
+                    {{ form.as_p }}
+                    <input type="submit" class="btn btn-success"
+                           value="{% if object %}Сохранить{% else %} Создать {% endif %}">
                 </form>
             </div>
             <div class="card-footer">
-                <a href="{% url 'main:customer_list' %}" class="btn btn-primary"><< Назад</a>
+                <a href="{% url 'main:sending_list' %}" class="btn btn-primary"><< Назад</a>
             </div>
         </div>
     </div>

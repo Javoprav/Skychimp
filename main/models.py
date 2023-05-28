@@ -6,7 +6,7 @@ NULLABLE = {'null': True, 'blank': True}
 class Customer(models.Model):
     name = models.CharField(max_length=150, verbose_name='имя')
     email = models.EmailField(max_length=150, verbose_name='почта')
-    message = models.TextField()
+    message = models.TextField(verbose_name='Сообщение')
 
     def __str__(self):
         return f'{self.email}'
@@ -17,8 +17,8 @@ class Customer(models.Model):
 
 
 class Message(models.Model):
-    subject = models.CharField(max_length=254)
-    body = models.TextField()
+    subject = models.CharField(max_length=254, verbose_name='Тема')
+    body = models.TextField(verbose_name='Сообщение')
     created_at = models.DateTimeField(auto_now_add=True)
 
     def __str__(self):
@@ -42,11 +42,11 @@ class Sending(models.Model):
         ('запущена', 'Запущена'),
     ]
 
-    message = models.ForeignKey(Message, on_delete=models.CASCADE)
+    message = models.ForeignKey(Message, on_delete=models.CASCADE, verbose_name='Сообщение')
     created_at = models.DateTimeField(auto_now_add=True)
     scheduled_time = models.TimeField()
-    frequency = models.CharField(max_length=14, choices=FREQUENCY_CHOICES)
-    status = models.CharField(max_length=50, default='created', choices=SELECT_STATUS)
+    frequency = models.CharField(max_length=14, choices=FREQUENCY_CHOICES, verbose_name='Периодичность')
+    status = models.CharField(max_length=50, default='created', choices=SELECT_STATUS, verbose_name='Статус')
 
     def __str__(self):
         return self.message.subject
@@ -63,10 +63,10 @@ class Attempt(models.Model):
         ('не удачно', 'Не удачно'),
     ]
 
-    sending = models.ForeignKey(Sending, on_delete=models.CASCADE)
+    sending = models.ForeignKey(Sending, on_delete=models.CASCADE, verbose_name='Рассылка')
     sent_at = models.DateTimeField(auto_now_add=True)
-    status = models.CharField(max_length=50, choices=STATUS_CHOICES)
-    response = models.TextField(**NULLABLE)
+    status = models.CharField(max_length=50, choices=STATUS_CHOICES, verbose_name='Статус')
+    response = models.TextField(**NULLABLE, verbose_name='Ответ сервера')
 
     def __str__(self):
         return f"{self.sending.message.subject} - {self.sent_at}"

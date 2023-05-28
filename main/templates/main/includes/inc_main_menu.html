@@ -6,9 +6,12 @@
         <a class="nav-link" href="{% url 'main:customer_list' %}">Клиенты</a>  <!-- динамическая ссылка на url -->
     </li>
     <li class="nav-item">
-        <a class="nav-link" href="#">Рассылки</a>  <!-- динамическая ссылка на url -->
+        <a class="nav-link" href="{% url 'main:message_list' %}">Сообщения</a>  <!-- динамическая ссылка на url -->
     </li>
     <li class="nav-item">
-        <a class="nav-link" href="#">Контакты</a>  <!-- динамическая ссылка на url -->
+        <a class="nav-link" href="{% url 'main:sending_list' %}">Рассылка</a>  <!-- динамическая ссылка на url -->
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" href="{% url 'main:sending_list' %}">Статистика</a>  <!-- динамическая ссылка на url -->
     </li>
 </ul>

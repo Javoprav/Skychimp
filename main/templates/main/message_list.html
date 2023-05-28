@@ -5,25 +5,24 @@
         <div class="row row-cols-1 row-cols-md-3 mb-3 text-center">
             margin: 40px;
             <div class="col-12">   <!-- кнопка Создать студента -->
-                <a href="{% url 'main:customer_create' %}" class="btn btn-primary m-2">Создать клиента</a>
+                <a href="{% url 'main:message_create' %}" class="btn btn-primary m-2">Создать сообщение</a>
             </div>
-            {% for object in object_list %}
+            {% for object in message_list %}
                 <div class="col">
                     <div class="card mb-4 rounded-3 shadow-sm">
                         <div class="card-header py-3">
-                            <h5 class="my-0 fw-normal">{{ object.name }}</h5>
+                            <h5 class="my-0 fw-normal">{{ object.subject }}</h5>
                         </div>
                         <div class="card-body">
-                            <h6 class="card-title pricing-card-title">{{ object.email }}</h6>
-
+                            <h6 class="card-title pricing-card-title">{{ object.body }}</h6>
                             <ul class="list-unstyled mt-3 mb-4">
-                                <li class="card-title pricing-card-title">{{ object.message }}</li>
+                                <li class="card-title pricing-card-title">{{ object.created_at }}</li>
                             </ul>
-                            <p><a class="btn btn-secondary" href="{% url 'main:customer_view' object.pk %}">Посмотреть
+                            <p><a class="btn btn-secondary" href="{% url 'main:message_view' object.pk %}">Посмотреть
                                 &raquo;</a></p>
-                            <p><a class="btn btn-warning" href="{% url 'main:customer_update' object.pk %}">Изменить
+                            <p><a class="btn btn-warning" href="{% url 'main:message_update' object.pk %}">Изменить
                                 &raquo;</a></p>
-                            <p><a class="btn btn-danger" href="{% url 'main:customer_delete' object.pk %}">Удалить
+                            <p><a class="btn btn-danger" href="{% url 'main:message_delete' object.pk %}">Удалить
                                 &raquo;</a></p>
                         </div>
                     </div>
