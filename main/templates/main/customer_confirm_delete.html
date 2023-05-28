@@ -1,0 +1,18 @@
+{% extends 'main/base.html' %} <!-- Выводит базовый html (верхняя, базовая часть сайта) -->
+{% load mediapath %}
+{% block content %}  <!-- ШАБЛОННЫЙ ТЕГ for content -->
+    <div class="col">
+        <div class="card">
+            <div class="card-body">
+                <form method="post">
+                  {% csrf_token %}
+                  Уверены что хотите удалить запись "{{ object }}"?<br> <br> <!-- <br> отступ -->
+                  <input type="submit" class="btn btn-outline-danger" value="Уверен">   <!-- ШАБЛОННЫЙ ТЕГ Условия -->
+                </form>
+            </div>
+            <div class="card-footer">
+                <a href="{% url 'main:customer_list' %}" class="btn btn-primary"><< Назад</a>
+            </div>
+        </div>
+    </div>
+{% endblock %}   <!-- закрытие ШАБЛОННЫЙ ТЕГ for content -->

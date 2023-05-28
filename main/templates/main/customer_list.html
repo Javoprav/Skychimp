@@ -1,8 +1,13 @@
 {% extends 'main/base.html' %} <!-- Выводит базовый html (верхняя, базовая часть сайта) -->
 
 {% block content %}  <!-- ШАБЛОННЫЙ ТЕГ for content -->
+
     <main>
+
         <div class="row row-cols-1 row-cols-md-3 mb-3 text-center">
+            <div class="col-12">   <!-- кнопка Создать студента -->
+                <a href="{% url 'main:customer_create' %}" class="btn btn-primary m-2">Создать клиента</a>
+            </div>
             {% for object in object_list %}
                 <div class="col">
                     <div class="card mb-4 rounded-3 shadow-sm">
@@ -15,8 +20,14 @@
                             <ul class="list-unstyled mt-3 mb-4">
                                 <li class="card-title pricing-card-title">{{ object.message }}</li>
                             </ul>
-                            <a href="{% url 'main:customer_view' object.pk %}" type="button"
-                               class="w-100 btn btn-lg btn-outline-primary">Информация</a>
+
+                            <p><a class="btn btn-secondary" href="{% url 'main:customer_view' object.pk %}">Посмотреть
+                                &raquo;</a></p>
+                            <p><a class="btn btn-warning" href="{% url 'main:customer_update' object.pk %}">Изменить
+                                &raquo;</a></p>
+                            <p><a class="btn btn-danger" href="{% url 'main:customer_delete' object.pk %}">Удалить
+                                &raquo;</a></p>
+
                         </div>
                     </div>
                 </div>
