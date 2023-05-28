@@ -2,7 +2,7 @@ from django.shortcuts import render, reverse
 from django.urls import reverse_lazy
 from django.views.generic import ListView, DetailView, CreateView, UpdateView, DeleteView
 
-from main.models import Customer
+from main.models import Customer, Sending, Attempt, Message
 
 
 class CustomerListView(ListView):
@@ -34,3 +34,7 @@ class CustomerUpdateView(UpdateView):
 class CustomerDeleteView(DeleteView):
     model = Customer
     success_url = reverse_lazy('main:customer_list')
+
+
+class CustomerDetailView(DetailView):
+    model = Customer
