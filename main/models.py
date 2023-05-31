@@ -30,21 +30,31 @@ class Message(models.Model):
 
 
 class Sending(models.Model):
+    ONCE = 'Один раз'
+    DAILY = '1 раз в день'
+    WEEKLY = '1 раз в неделю'
+    MONTHLY = '1 раз в месяц'
+
     FREQUENCY_CHOICES = [
-        ('1 раз в день', '1 раз в день'),
-        ('1 раз в неделю', '1 раз в неделю'),
-        ('1 раз в месяц', '1 раз в месяц'),
+        (ONCE, 'Один раз'),
+        (DAILY, '1 раз в день'),
+        (WEEKLY, '1 раз в неделю'),
+        (MONTHLY, '1 раз в месяц'),
     ]
 
+    CREATED = 'Создана'
+    COMPLETED = 'Завершена'
+    LAUNCHED = 'Запущена'
+
     SELECT_STATUS = [
-        ('создана', 'Создана'),
-        ('завершена', 'Завершена'),
-        ('запущена', 'Запущена'),
+        (CREATED, 'Создана'),
+        (COMPLETED, 'Завершена'),
+        (LAUNCHED, 'Запущена'),
     ]
 
     message = models.ForeignKey(Message, on_delete=models.CASCADE, verbose_name='Сообщение')
     created_at = models.DateTimeField(auto_now_add=True)
-    scheduled_time = models.TimeField()
+    scheduled_time = models.TimeField(auto_now_add=True, verbose_name='Время рассылки')
     frequency = models.CharField(max_length=14, choices=FREQUENCY_CHOICES, verbose_name='Периодичность')
     status = models.CharField(max_length=50, default='created', choices=SELECT_STATUS, verbose_name='Статус')
 
