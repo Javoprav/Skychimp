@@ -1,0 +1,28 @@
+{% extends 'main/base.html' %} <!-- Выводит базовый html (верхняя, базовая часть сайта) -->
+
+{% block content %}
+    margin: 40px;
+    <div class="card">
+        margin: 40px;
+        <div class="card-header">{{ object.sending }}</div>
+        <div class="card-body">
+            <table class="table table-striped">
+                <div class="card mb-4 rounded-3 shadow-sm">
+                    <div class="card-header py-3">
+                        <h5 class="my-0 fw-normal">{{ object.sent_at }}</h5>
+                    </div>
+                    <div class="card-body">
+                        <h6 class="card-title pricing-card-title">{{ object.status }}</h6>
+                        <ul class="list-unstyled mt-3 mb-4">
+                            <li class="card-title pricing-card-title">{{ object.response }}</li>
+                        </ul>
+                    </div>
+                </div>
+            </table>
+        </div>
+        <div class="card-footer">
+            <a href="{% url 'main:customer_list' %}" type="button"
+               class="w-100 btn btn-lg btn-outline-primary">назад</a>
+        </div>
+    </div>
+{% endblock %}

@@ -1,0 +1,30 @@
+{% extends 'main/base.html' %} <!-- Выводит базовый html (верхняя, базовая часть сайта) -->
+{% block content %}  <!-- ШАБЛОННЫЙ ТЕГ for content -->
+
+    <main>
+        <div class="col-12">   <!-- кнопка Создать студента -->
+            <a href="{% url 'main:message_create' %}" class="btn btn-primary m-2">Создать сообщение</a>
+        </div>
+        <div class="row row-cols-1 row-cols-md-3 mb-3 text-center">
+            {% for object in object_list %}
+                <div class="col">
+                    <div class="card mb-4 rounded-3 shadow-sm">
+                        <div class="card-header py-3">
+                            <h5 class="my-0 fw-normal">{{ object.sending }}</h5>
+                        </div>
+                        <div class="card-body">
+                            <ul class="list-unstyled mt-3 mb-4">
+                                <li class="card-title pricing-card-title">{{ object.sent_at }}</li>
+                            </ul>
+                            <ul class="list-unstyled mt-3 mb-4">
+                                <li class="card-title pricing-card-title">{{ object.status }}</li>
+                            </ul>
+                            <p><a class="btn btn-secondary" href="{% url 'main:attempt_view' object.pk %}">Посмотреть
+                                &raquo;</a></p>
+                        </div>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    </main>
+{% endblock %}   <!-- закрытие ШАБЛОННЫЙ ТЕГ for content -->

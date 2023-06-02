@@ -11,6 +11,8 @@ https://docs.djangoproject.com/en/4.2/ref/settings/
 """
 import os
 from pathlib import Path
+from django_crontab.crontab import Crontab
+import fcntl
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -139,3 +141,10 @@ EMAIL_HOST_USER = 'igor.perov18@yandex.ru'
 EMAIL_HOST_PASSWORD = os.getenv('ya.pass')
 EMAIL_USE_TLS = False            # у gmail наоборот True
 EMAIL_USE_SSL = True             # у gmail наоборот False
+
+
+CRONJOBS = [
+    ('0 12 * * *', 'main.services.send_email', 'Sending.DAILY'),
+    ('0 12 * * 1', 'main.services.send_email', 'Sending.WEEKLY'),
+    ('0 12 1 * *', 'main.services.send_email', 'Sending.MONTHLY'),
+]

@@ -65,17 +65,22 @@ class Sending(models.Model):
         verbose_name = 'Рассылка'
         verbose_name_plural = 'Рассылки'
 
+    # def task_planning:
+
 
 class Attempt(models.Model):
-    STATUS_CHOICES = [
-        ('в процессе', 'В процессе'),
-        ('успешно', 'Успешно'),
-        ('не удачно', 'Не удачно'),
-    ]
+
+    DELIVERED = 'delivered'
+    NOT_DELIVERED = 'not_delivered'
+
+    STATUS = (
+        (DELIVERED, 'доставлено'),
+        (NOT_DELIVERED, 'не доставлено'),
+    )
 
     sending = models.ForeignKey(Sending, on_delete=models.CASCADE, verbose_name='Рассылка')
-    sent_at = models.DateTimeField(auto_now_add=True)
-    status = models.CharField(max_length=50, choices=STATUS_CHOICES, verbose_name='Статус')
+    sent_at = models.DateTimeField(auto_now_add=True, verbose_name='Время рассылки')
+    status = models.CharField(choices=STATUS, verbose_name='Статус')
     response = models.TextField(**NULLABLE, verbose_name='Ответ сервера')
 
     def __str__(self):

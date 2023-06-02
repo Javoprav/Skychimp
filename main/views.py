@@ -85,7 +85,6 @@ class SendingCreateView(CreateView):
     success_url = reverse_lazy('main:sending_list')
 
 
-
 class SendingUpdateView(UpdateView):
     model = Sending
     fields = ('message', 'frequency', 'status', )
@@ -97,3 +96,15 @@ class SendingUpdateView(UpdateView):
 class SendingDeleteView(DeleteView):
     model = Sending
     success_url = reverse_lazy('main:sending_list')
+
+
+class AttemptListView(ListView):
+    model = Attempt
+    extra_context = {
+        'object_list': Attempt.objects.all(),
+        'title': 'Все Рассылки'  # дополнение к статической информации
+    }
+
+
+class AttemptDetailView(DetailView):
+    model = Attempt

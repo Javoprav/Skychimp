@@ -22,4 +22,6 @@ urlpatterns = [
     path('sending/create/', SendingCreateView.as_view(), name='sending_create'),
     path('sending/update/<int:pk>/', SendingUpdateView.as_view(), name='sending_update'),
     path('sending/delete/<int:pk>/', SendingDeleteView.as_view(), name='sending_delete'),
+    path('attempt/', AttemptListView.as_view(), name='attempt_list'),
+    path('attempt/<int:pk>/', AttemptDetailView.as_view(), name='attempt_view'),
 ]
