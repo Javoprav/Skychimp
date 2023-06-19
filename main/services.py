@@ -24,17 +24,17 @@ def send_email(*args):  # отправка письма
                     from_email=settings.EMAIL_HOST_USER,
                     recipient_list=[*all_email],
                 )
-        # создание статистики из модели Attempt
-        status_list = []
-        server_response = {
-            'sending': Sending.objects.get(pk=send.id),
-            # 'sent_at': datetime.datetime.now(),
-            'status': Attempt.DELIVERED,
-            'response': [*all_email]}
-        status_list.append(Attempt(**server_response))
-        Attempt.objects.bulk_create(status_list)
-        # создание рассылки по Sending.frequency
-        if send.frequency == Sending.ONCE:
-            send.status = Sending.COMPLETED
-        else:
-            send.status = Sending.LAUNCHED
+                # создание статистики из модели Attempt
+                status_list = []
+                server_response = {
+                    'sending': Sending.objects.get(pk=send.id),
+                    # 'sent_at': datetime.datetime.now(),
+                    'status': Attempt.DELIVERED,
+                    'response': [*all_email]}
+                status_list.append(Attempt(**server_response))
+                Attempt.objects.bulk_create(status_list)
+                # создание рассылки по Sending.frequency
+                if send.frequency == Sending.ONCE:
+                    send.status = Sending.COMPLETED
+                else:
+                    send.status = Sending.LAUNCHED

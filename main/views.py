@@ -1,8 +1,9 @@
 from django.shortcuts import render, reverse
 from django.urls import reverse_lazy
 from django.views.generic import ListView, DetailView, CreateView, UpdateView, DeleteView
-
+from django.conf import settings
 from main.models import Customer, Sending, Attempt, Message
+from main.services import send_email
 
 
 class CustomerListView(ListView):
@@ -83,6 +84,7 @@ class SendingCreateView(CreateView):
     model = Sending
     fields = ('message', 'frequency', 'status', )
     success_url = reverse_lazy('main:sending_list')
+    send_email(Sending.ONCE)
 
 
 class SendingUpdateView(UpdateView):

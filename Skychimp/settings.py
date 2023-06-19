@@ -11,10 +11,11 @@ https://docs.djangoproject.com/en/4.2/ref/settings/
 """
 import os
 from pathlib import Path
+from dotenv import load_dotenv
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
-
+load_dotenv(BASE_DIR / '.env')
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/4.2/howto/deployment/checklist/
@@ -27,7 +28,6 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 
-
 # Application definition
 
 INSTALLED_APPS = [
@@ -39,9 +39,11 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'main.apps.MainConfig',
     'django_crontab',
+    # 'users.apps.UsersConfig',
 ]
 
 MIDDLEWARE = [
+    # "django.middleware.cache.UpdateCacheMiddleware",
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
@@ -49,6 +51,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    # "django.middleware.cache.FetchFromCacheMiddleware",
 ]
 
 ROOT_URLCONF = 'Skychimp.urls'
@@ -72,19 +75,17 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'Skychimp.wsgi.application'
 
-
 # Database
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
 
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'boatsell',
-        'USER': 'postgres',
-        'PASSWORD': os.getenv('bd_pass')
+        'NAME': os.getenv("NAME_POSTGRES"),
+        'USER': os.getenv('USER_POSTGRES'),
+        # 'PASSWORD': os.getenv('bd_pass')
     }
 }
-
 
 # Password validation
 # https://docs.djangoproject.com/en/4.2/ref/settings/#auth-password-validators
@@ -104,7 +105,6 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
-
 # Internationalization
 # https://docs.djangoproject.com/en/4.2/topics/i18n/
 
@@ -115,7 +115,6 @@ TIME_ZONE = 'UTC'
 USE_I18N = True
 
 USE_TZ = True
-
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.2/howto/static-files/
@@ -135,14 +134,26 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 EMAIL_HOST = 'smtp.yandex.com'
 EMAIL_PORT = 465
-EMAIL_HOST_USER = 'igor.perov18@yandex.ru'
-EMAIL_HOST_PASSWORD = os.getenv('ya.pass')
-EMAIL_USE_TLS = False            # у gmail наоборот True
-EMAIL_USE_SSL = True             # у gmail наоборот False
-
+EMAIL_HOST_USER = os.getenv("EMAIL_HOST_USER")
+EMAIL_HOST_PASSWORD = os.getenv("EMAIL_HOST_PASSWORD")
+EMAIL_USE_TLS = False  # у gmail наоборот True
+EMAIL_USE_SSL = True  # у gmail наоборот False
 
 CRONJOBS = [
-    ('0 12 * * *', 'main.services.send_email', 'Sending.DAILY'),
-    ('0 12 * * 1', 'main.services.send_email', 'Sending.WEEKLY'),
-    ('0 12 1 * *', 'main.services.send_email', 'Sending.MONTHLY'),
+    ('0 12 * * *', 'main.services.send_email', ['1 раз в день']),
+    ('0 12 * * 1', 'main.services.send_email', ['1 раз в неделю']),
+    ('0 12 1 * *', 'main.services.send_email', ['1 раз в месяц']),
 ]
+
+# AUTH_USER_MODEL = 'users.User'
+LOGIN_REDIRECT_URL = '/'
+LOGOUT_REDIRECT_URL = '/'
+LOGIN_URL = '/users/'
+
+CACHE_ENABLED = os.getenv("CACHE_ENABLED") == 'True'
+CACHES = {
+    "default": {
+        "BACKEND": "django.core.cache.backends.redis.RedisCache",
+        "LOCATION": os.getenv("CACHE_LOCATION"),
+    }
+}
