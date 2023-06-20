@@ -1,0 +1,13 @@
+{% extends 'main/base.html' %}
+
+{% block content %}
+    <div class="container">
+        <br>
+        <h1 class="display-8">Ошибка!</h1>
+        <h1 class="display-8">Аккаунт не найден.</h1>
+        <br>
+        <h5 class="display-8">Возможно прошло слишком много времени с момента регистрации, попробуйте повторно перейти по ссылке из сообщения или зарегистрироваться заново</h5>
+        <a class="p-2 btn btn-outline-dark" href="{% url 'users:register' %}">Рeгистрация</a>
+    </div>
+
+{% endblock %}

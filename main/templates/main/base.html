@@ -55,13 +55,12 @@
         </div>
     </nav>
 </header>
-
-
-{% block content %}
-{% endblock %}
-
-
-
+<main class="container marketing">
+    <div class="row">
+        {% block content %}  <!-- выводит content из index.html -->
+        {% endblock %}
+    </div><!-- /.row -->
+</main>
 <footer class="pt-4 my-md-5 pt-md-5 border-top">
     <div class="row">
         <div class="col-12 col-md">
@@ -77,6 +76,6 @@
         </div>
     </div>
 </footer>
-</div>
+
 </body>
 </html>
