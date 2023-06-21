@@ -56,10 +56,14 @@
     </nav>
 </header>
 <main class="container marketing">
-    <div class="row">
-        {% block content %}  <!-- выводит content из index.html -->
-        {% endblock %}
-    </div><!-- /.row -->
+    <div class="row gy-5">
+        <div class="row">
+            <div class="row gy-5">
+                {% block content %}  <!-- выводит content из index.html -->
+                {% endblock %}
+            </div><!-- /.row -->
+        </div>
+    </div>
 </main>
 <footer class="pt-4 my-md-5 pt-md-5 border-top">
     <div class="row">

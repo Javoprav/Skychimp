@@ -1,9 +1,7 @@
 {% extends 'main/base.html' %} <!-- Выводит базовый html (верхняя, базовая часть сайта) -->
 
-{% block content %}  <!-- ШАБЛОННЫЙ ТЕГ for content -->
-    margin: 40px;
+{% block content %}
     <div class="col">
-        margin: 40px;
         <div class="card">
             <div class="card-body">
                 <form action="" enctype="multipart/form-data" method="post">{% csrf_token %}

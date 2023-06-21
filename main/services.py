@@ -12,9 +12,9 @@ def send_email(*args):  # отправка письма
     for customer in Customer.objects.all():
         all_email.append(str(customer.email))
 
-    # print(all_email)
     for send in Sending.objects.all():
         if send.status == Sending.CREATED and send.frequency == (str(*args)):
+            print(send, Sending.CREATED, send.frequency, str(*args))
             message1 = send.message
             message = Message.objects.filter(subject=message1)
             for mes in message:
@@ -36,5 +36,7 @@ def send_email(*args):  # отправка письма
                 # создание рассылки по Sending.frequency
                 if send.frequency == Sending.ONCE:
                     send.status = Sending.COMPLETED
+                    send.save()
                 else:
                     send.status = Sending.LAUNCHED
+                    send.save()

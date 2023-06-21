@@ -84,7 +84,7 @@ class SendingCreateView(CreateView):
     model = Sending
     fields = ('message', 'frequency', 'status', )
     success_url = reverse_lazy('main:sending_list')
-    # send_email(Sending.ONCE)
+    send_email(Sending.ONCE)
 
 
 class SendingUpdateView(UpdateView):
