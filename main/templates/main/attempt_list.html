@@ -1,10 +1,6 @@
-{% extends 'main/base.html' %} <!-- Выводит базовый html (верхняя, базовая часть сайта) -->
-{% block content %}  <!-- ШАБЛОННЫЙ ТЕГ for content -->
-
+{% extends 'main/base.html' %}
+{% block content %}
     <main>
-        <div class="col-12">   <!-- кнопка Создать студента -->
-            <a href="{% url 'main:message_create' %}" class="btn btn-primary m-2">Создать сообщение</a>
-        </div>
         <div class="row row-cols-1 row-cols-md-3 mb-3 text-center">
             {% for object in object_list %}
                 <div class="col">

@@ -1,19 +1,40 @@
 from django.shortcuts import render, reverse
 from django.urls import reverse_lazy
-from django.views.generic import ListView, DetailView, CreateView, UpdateView, DeleteView
+from django.views.generic import ListView, DetailView, CreateView, UpdateView, DeleteView, TemplateView
 from django.conf import settings
+from django.http import Http404
 from main.models import Customer, Sending, Attempt, Message
 from main.services import send_email
-from django.contrib.auth.mixins import LoginRequiredMixin, PermissionRequiredMixin
+from django.contrib.auth.mixins import LoginRequiredMixin, PermissionRequiredMixin, UserPassesTestMixin
 
 
-class CustomerListView(LoginRequiredMixin, PermissionRequiredMixin, ListView):
+class IndexView(TemplateView):
+    template_name = 'main/index.html'
+    extra_context = {
+        'title': 'Главная страница',
+        'object_list': Sending.objects.all()
+    }
+
+
+class CustomerListView(LoginRequiredMixin, ListView):
     model = Customer
-    permission_required = 'main.view_customer'
+    # permission_required = 'main.view_customer'
     extra_context = {
         'object_list': Customer.objects.all(),
         'title': 'Все клиенты'  # дополнение к статической информации
     }
+
+    # def get_queryset(self):
+    #     queryset = super().get_queryset()
+    #     user = self.request.user
+    #     queryset = queryset.filter(created_by=user)
+    #     return queryset
+
+    # def get_object(self, queryset=None):
+    #     self.object = super().get_object(queryset)
+    #     if self.object.user != self.request.user:
+    #         raise Http404("Вы не являетесь владельцем этого товара")
+    #     return self.object
 
 
 class CustomerDetailView(LoginRequiredMixin, DetailView):
@@ -74,7 +95,7 @@ class SendingListView(LoginRequiredMixin, ListView):
     model = Sending
     extra_context = {
         'object_list': Sending.objects.all(),
-        'title': 'Все Рассылки'  # дополнение к статической информации
+        'title': 'Все Рассылки'
     }
 
 

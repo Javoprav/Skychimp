@@ -7,7 +7,7 @@ app_name = MainConfig.name
 
 
 urlpatterns = [
-    path('', CustomerListView.as_view(), name='customer_list'),
+    path('', IndexView.as_view(), name='Index'),
     path('customer/', CustomerListView.as_view(), name='customer_list'),
     path('<int:pk>/', CustomerDetailView.as_view(), name='customer_view'),
     path('customer/create/', CustomerCreateView.as_view(), name='customer_create'),

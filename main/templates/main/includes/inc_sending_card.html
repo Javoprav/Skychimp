@@ -1,0 +1,30 @@
+{% load mediapath %}
+<div class="col-lg-4">
+    <div class="card m-2 text-center">
+        <div class="card-body">
+            <div class="card mb-4 rounded-3 shadow-sm">
+                <div class="card-header py-3">
+                    <h5 class="my-0 fw-normal">{{ object.message }}</h5>
+                </div>
+                <div class="card-body">
+                    <h6 class="card-title pricing-card-title">{{ object.created_at }}</h6>
+                    <ul class="list-unstyled mt-3 mb-4">
+                        <li class="card-title pricing-card-title">{{ object.scheduled_time }}</li>
+                    </ul>
+                    <ul class="list-unstyled mt-3 mb-4">
+                        <li class="card-title pricing-card-title">{{ object.frequency }}</li>
+                    </ul>
+                    <ul class="list-unstyled mt-3 mb-4">
+                        <li class="card-title pricing-card-title">{{ object.status }}</li>
+                    </ul>
+                    <p><a class="btn btn-secondary" href="{% url 'main:sending_view' object.pk %}">Посмотреть
+                        &raquo;</a></p>
+                    <p><a class="btn btn-warning" href="{% url 'main:sending_update' object.pk %}">Изменить
+                        &raquo;</a></p>
+                    <p><a class="btn btn-danger" href="{% url 'main:sending_delete' object.pk %}">Удалить
+                        &raquo;</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div><!-- /.col-lg-4 -->
