@@ -4,27 +4,29 @@ from django.views.generic import ListView, DetailView, CreateView, UpdateView, D
 from django.conf import settings
 from main.models import Customer, Sending, Attempt, Message
 from main.services import send_email
+from django.contrib.auth.mixins import LoginRequiredMixin, PermissionRequiredMixin
 
 
-class CustomerListView(ListView):
+class CustomerListView(LoginRequiredMixin, PermissionRequiredMixin, ListView):
     model = Customer
+    permission_required = 'main.view_customer'
     extra_context = {
         'object_list': Customer.objects.all(),
         'title': 'Все клиенты'  # дополнение к статической информации
     }
 
 
-class CustomerDetailView(DetailView):
+class CustomerDetailView(LoginRequiredMixin, DetailView):
     model = Customer
 
 
-class CustomerCreateView(CreateView):
+class CustomerCreateView(LoginRequiredMixin, CreateView):
     model = Customer
     fields = ('name', 'email', 'message',)
     success_url = reverse_lazy('main:customer_list')
 
 
-class CustomerUpdateView(UpdateView):
+class CustomerUpdateView(LoginRequiredMixin, UpdateView):
     model = Customer
     fields = ('name', 'email', 'message',)
 
@@ -32,12 +34,12 @@ class CustomerUpdateView(UpdateView):
         return reverse('main:customer_view', args=[str(self.object.pk)])
 
 
-class CustomerDeleteView(DeleteView):
+class CustomerDeleteView(LoginRequiredMixin, DeleteView):
     model = Customer
     success_url = reverse_lazy('main:customer_list')
 
 
-class MessageListView(ListView):
+class MessageListView(LoginRequiredMixin, ListView):
     model = Message
     extra_context = {
         'message_list': Message.objects.all(),
@@ -45,17 +47,17 @@ class MessageListView(ListView):
     }
 
 
-class MessageDetailView(DetailView):
+class MessageDetailView(LoginRequiredMixin, DetailView):
     model = Message
 
 
-class MessageCreateView(CreateView):
+class MessageCreateView(LoginRequiredMixin, CreateView):
     model = Message
     fields = ('subject', 'body', )
     success_url = reverse_lazy('main:message_list')
 
 
-class MessageUpdateView(UpdateView):
+class MessageUpdateView(LoginRequiredMixin, UpdateView):
     model = Message
     fields = ('subject', 'body', )
 
@@ -63,12 +65,12 @@ class MessageUpdateView(UpdateView):
         return reverse('main:message_view', args=[str(self.object.pk)])
 
 
-class MessageDeleteView(DeleteView):
+class MessageDeleteView(LoginRequiredMixin, DeleteView):
     model = Message
     success_url = reverse_lazy('main:message_list')
 
 
-class SendingListView(ListView):
+class SendingListView(LoginRequiredMixin, ListView):
     model = Sending
     extra_context = {
         'object_list': Sending.objects.all(),
@@ -76,18 +78,18 @@ class SendingListView(ListView):
     }
 
 
-class SendingDetailView(DetailView):
+class SendingDetailView(LoginRequiredMixin, DetailView):
     model = Sending
 
 
-class SendingCreateView(CreateView):
+class SendingCreateView(LoginRequiredMixin, CreateView):
     model = Sending
     fields = ('message', 'frequency', 'status', )
     success_url = reverse_lazy('main:sending_list')
     send_email(Sending.ONCE)
 
 
-class SendingUpdateView(UpdateView):
+class SendingUpdateView(LoginRequiredMixin, UpdateView):
     model = Sending
     fields = ('message', 'frequency', 'status', )
 
@@ -95,12 +97,12 @@ class SendingUpdateView(UpdateView):
         return reverse('main:sending_view', args=[str(self.object.pk)])
 
 
-class SendingDeleteView(DeleteView):
+class SendingDeleteView(LoginRequiredMixin, DeleteView):
     model = Sending
     success_url = reverse_lazy('main:sending_list')
 
 
-class AttemptListView(ListView):
+class AttemptListView(LoginRequiredMixin, ListView):
     model = Attempt
     extra_context = {
         'object_list': Attempt.objects.all(),
@@ -108,5 +110,5 @@ class AttemptListView(ListView):
     }
 
 
-class AttemptDetailView(DetailView):
+class AttemptDetailView(LoginRequiredMixin, DetailView):
     model = Attempt

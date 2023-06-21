@@ -1,21 +1,18 @@
-import datetime
-
+from django.core.management import BaseCommand
 from django.core.mail import send_mail
 from django.conf import settings
-from django.utils import timezone
 from main.models import *
 
 
-def send_email(*args):  # отправка письма
-    #  sendings = Sending.objects.filter(status='Создана')
-    all_email = []
-    for customer in Customer.objects.all():
-        all_email.append(str(customer.email))
+class Command(BaseCommand):
+    def handle(self, *args, **kwargs):
+        all_email = []
+        for customer in Customer.objects.all():
+            all_email.append(str(customer.email))
 
-    for send in Sending.objects.all():
-        if send.status == Sending.CREATED and send.frequency == (str(*args)):
-            message_for_filter = send.message
-            message = Message.objects.filter(subject=message_for_filter)
+        for send in Sending.objects.all():
+            message1 = send.message
+            message = Message.objects.filter(subject=message1)
             for mes in message:
                 send_mail(
                     subject=mes.subject,
