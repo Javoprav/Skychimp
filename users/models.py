@@ -45,6 +45,7 @@ class User(AbstractUser):
     email = models.EmailField(unique=True, verbose_name='почта')
     token = models.CharField(max_length=15, verbose_name='токен', **NULLABLE)
     token_time = models.DateTimeField(auto_now_add=True, verbose_name='время создания токена', **NULLABLE)
+    is_active = models.BooleanField(default=True,  verbose_name='активный')
 
     USERNAME_FIELD = "email"
     REQUIRED_FIELDS = []
@@ -58,5 +59,5 @@ class User(AbstractUser):
         verbose_name = 'Пользователь'
         verbose_name_plural = 'Пользователи'
         permissions = [
-            ('set_block_users', 'Can set block users'),
+            ('can_block_users', 'Can block users'),
         ]

@@ -102,7 +102,7 @@ class SendingListView(LoginRequiredMixin, ListView):
         queryset = super().get_queryset()
         if self.request.user.has_perm('main.view_sending'):
             return queryset
-        return Sending.objects.filter(created_by=self.request.user)
+        return Sending.objects.filter(created=self.request.user)
 
 
 class SendingDetailView(LoginRequiredMixin, DetailView):
