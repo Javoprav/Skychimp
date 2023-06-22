@@ -53,3 +53,10 @@ class User(AbstractUser):
 
     def __str__(self):
         return f'{self.email}'
+
+    class Meta:
+        verbose_name = 'Пользователь'
+        verbose_name_plural = 'Пользователи'
+        permissions = [
+            ('set_block_users', 'Can set block users'),
+        ]
