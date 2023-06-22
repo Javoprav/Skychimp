@@ -3,7 +3,7 @@ from django.urls import reverse_lazy
 from django.views.generic import ListView, DetailView, CreateView, UpdateView, DeleteView, TemplateView
 from django.conf import settings
 from django.http import Http404
-from main.models import Customer, Sending, Attempt, Message
+from main.models import *
 from main.services import send_email
 from django.contrib.auth.mixins import LoginRequiredMixin, PermissionRequiredMixin, UserPassesTestMixin
 
@@ -24,11 +24,11 @@ class CustomerListView(LoginRequiredMixin, ListView):
         'title': 'Все клиенты'  # дополнение к статической информации
     }
 
-    # def get_queryset(self):
-    #     queryset = super().get_queryset()
-    #     user = self.request.user
-    #     queryset = queryset.filter(created_by=user)
-    #     return queryset
+    def get_queryset(self):
+        queryset = super().get_queryset()
+        if self.request.user.has_perm('main.view_client'):
+            return queryset
+        return Customer.objects.filter(created_by=self.request.user)
 
     # def get_object(self, queryset=None):
     #     self.object = super().get_object(queryset)
@@ -43,7 +43,7 @@ class CustomerDetailView(LoginRequiredMixin, DetailView):
 
 class CustomerCreateView(LoginRequiredMixin, CreateView):
     model = Customer
-    fields = ('name', 'email', 'message',)
+    fields = ('name', 'email', 'comment', 'created_by')
     success_url = reverse_lazy('main:customer_list')
 
 
@@ -98,6 +98,12 @@ class SendingListView(LoginRequiredMixin, ListView):
         'title': 'Все Рассылки'
     }
 
+    def get_queryset(self):
+        queryset = super().get_queryset()
+        if self.request.user.has_perm('main.view_sending'):
+            return queryset
+        return Sending.objects.filter(created_by=self.request.user)
+
 
 class SendingDetailView(LoginRequiredMixin, DetailView):
     model = Sending
@@ -105,7 +111,7 @@ class SendingDetailView(LoginRequiredMixin, DetailView):
 
 class SendingCreateView(LoginRequiredMixin, CreateView):
     model = Sending
-    fields = ('message', 'frequency', 'status', )
+    fields = ('message', 'frequency', 'status', 'created')
     success_url = reverse_lazy('main:sending_list')
     send_email(Sending.ONCE)
 

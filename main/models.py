@@ -4,9 +4,11 @@ NULLABLE = {'null': True, 'blank': True}
 
 
 class Customer(models.Model):
-    name = models.CharField(max_length=150, verbose_name='имя')
-    email = models.EmailField(max_length=150, verbose_name='почта')
-    message = models.TextField(verbose_name='Сообщение')
+    name = models.CharField(max_length=150, verbose_name='имя', **NULLABLE)
+    email = models.EmailField(max_length=150, verbose_name='почта', **NULLABLE)
+    comment = models.TextField(verbose_name='комментарий', **NULLABLE)
+    created_by = models.ForeignKey('users.User', on_delete=models.CASCADE, verbose_name='Кем создан',
+                                   related_name='client')
 
     def __str__(self):
         return f'{self.email}'
@@ -57,6 +59,8 @@ class Sending(models.Model):
     scheduled_time = models.TimeField(auto_now_add=True, verbose_name='Время рассылки')
     frequency = models.CharField(max_length=14, choices=FREQUENCY_CHOICES, verbose_name='Периодичность')
     status = models.CharField(max_length=50, default='created', choices=SELECT_STATUS, verbose_name='Статус')
+    created = models.ForeignKey('users.User',  on_delete=models.CASCADE, verbose_name='Кем создано',
+                                related_name='clients', **NULLABLE)
 
     def __str__(self):
         return self.message.subject
@@ -64,12 +68,12 @@ class Sending(models.Model):
     class Meta:
         verbose_name = 'Рассылка'
         verbose_name_plural = 'Рассылки'
-
-    # def task_planning:
+        permissions = [
+            ('set_send_status', 'Can set sending status'),
+        ]
 
 
 class Attempt(models.Model):
-
     DELIVERED = 'delivered'
     NOT_DELIVERED = 'not_delivered'
 
