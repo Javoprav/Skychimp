@@ -1,0 +1,10 @@
+{% extends 'main/base.html' %}
+
+{% block content %}
+    <div class="col-12">
+        <a href="{% url 'blog:post_create' %}" class="btn btn-primary m-2">Создать запись</a>
+    </div>
+    {% for object in object_list %}
+        {% include 'blog/includes/inc_post_card.html' %}
+    {% endfor %}
+{% endblock %}

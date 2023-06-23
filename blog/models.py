@@ -1,5 +1,5 @@
 from django.db import models
-
+from django.urls import reverse
 from main.models import NULLABLE
 from users.models import User
 
@@ -21,3 +21,10 @@ class Post(models.Model):
 
     def __str__(self):
         return self.title
+
+    def increase_views(self):
+        self.views_count += 1
+        self.save()
+
+    def get_absolute_url(self):
+        return reverse('blog:post_detail', kwargs={'slug': self.slug})

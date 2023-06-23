@@ -1,0 +1,34 @@
+{% extends 'main/base.html' %} <!-- Выводит базовый html (верхняя, базовая часть сайта) -->
+{% load mediapath %}
+{% block content %}
+    <div class="col">
+        <div class="card">
+            <div class="card-body">
+                <table class="table">
+                    <img src="{% mediapath object.preview %}" alt="Картинка" width="200" height="200"/>
+                    <tr>
+                        <td>заголовок</td>
+                        <td>{{ object.title }} </td>
+                    </tr>
+                    <tr>
+                        <td>Описание</td>
+                        <td>{{ object.content }}</td>
+                    </tr>
+                    <tr>
+                        <td>дата создания</td>
+                        <td>{{ object.created_at }}</td>
+                    </tr>
+                    <tr>
+                        <td>Количество просмотров:</td>
+                        <td>{{ object.views_count }}</td>
+                    </tr>
+                    <tr>
+                        <td>Количество просмотров:</td>
+                        <td>{{ object.created_by }}</td>
+                    </tr>
+                </table>
+            </div>
+            <a href="{% url 'blog:post_list' %}" class="btn btn-primary"><< Назад</a>
+        </div>
+    </div>
+{% endblock %}
