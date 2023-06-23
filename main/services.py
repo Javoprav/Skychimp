@@ -1,6 +1,8 @@
+from django import template
 from django.core.mail import send_mail
 from django.conf import settings
 from main.models import *
+register = template.Library()
 
 
 def send_email(*args):
@@ -32,3 +34,5 @@ def send_email(*args):
                 else:
                     send.status = Sending.LAUNCHED
                     send.save()
+
+
