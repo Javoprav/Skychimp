@@ -20,6 +20,13 @@
                 </div>
             </table>
         </div>
+        <a href="{% url 'main:set_status_sending' object.pk %}" class="btn btn-outline-warning float-end">
+            {% if object.CREATED %}
+                Деактивировать
+            {% else %}
+                Активировать
+            {% endif %}
+        </a>
         <div class="card-footer">
             <a href="{% url 'main:sending_list' %}" type="button" class="w-100 btn btn-lg btn-outline-primary">назад</a>
         </div>

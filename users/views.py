@@ -1,4 +1,6 @@
 import secrets
+
+from django.contrib.auth.mixins import LoginRequiredMixin
 from django.core.mail import send_mail
 from django.shortcuts import redirect, render, get_object_or_404
 from django.urls import reverse_lazy, reverse
@@ -9,7 +11,7 @@ from users.forms import UserForm, UserRegisterForm
 from users.models import User
 
 
-class ProfileUpdateView(UpdateView):
+class ProfileUpdateView(LoginRequiredMixin, UpdateView):
     model = User
     form_class = UserForm
     success_url = reverse_lazy('users:profile')
@@ -68,3 +70,5 @@ def generate_new_password(request):
     request.user.set_password(pass_ch)
     request.user.save()
     return redirect(reverse('users:login'))
+
+

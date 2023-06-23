@@ -1,4 +1,5 @@
 from django.contrib import admin
+from django.contrib.auth.decorators import login_required
 from django.urls import path, include
 from main.apps import MainConfig
 from main.views import *
@@ -25,4 +26,6 @@ urlpatterns = [
     path('sending/delete/<int:pk>/', SendingDeleteView.as_view(), name='sending_delete'),
     path('attempt/', AttemptListView.as_view(), name='attempt_list'),
     path('attempt/<int:pk>/', AttemptDetailView.as_view(), name='attempt_view'),
+    path('set_is_active/<int:pk>', login_required(set_is_active), name='set_is_active'),
+    path('set_status_sending/<int:pk>', login_required(set_status_sending), name='set_status_sending')
 ]

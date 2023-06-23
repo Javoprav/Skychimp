@@ -1,4 +1,4 @@
-from django.shortcuts import render, reverse
+from django.shortcuts import render, reverse, get_object_or_404, redirect
 from django.urls import reverse_lazy
 from django.views.generic import ListView, DetailView, CreateView, UpdateView, DeleteView, TemplateView
 from django.conf import settings
@@ -49,7 +49,7 @@ class CustomerCreateView(LoginRequiredMixin, CreateView):
 
 class CustomerUpdateView(LoginRequiredMixin, UpdateView):
     model = Customer
-    fields = ('name', 'email', 'message',)
+    fields = ('name', 'email', 'comment', 'created_by', 'is_active')
 
     def get_success_url(self):
         return reverse('main:customer_view', args=[str(self.object.pk)])
@@ -139,3 +139,24 @@ class AttemptListView(LoginRequiredMixin, ListView):
 
 class AttemptDetailView(LoginRequiredMixin, DetailView):
     model = Attempt
+
+
+def set_is_active(request, pk):
+    customer_item = get_object_or_404(Customer, pk=pk)  # get_object_or_404 ищет объект модели если не находит выводит ошибку
+    if customer_item.is_active:
+        customer_item.is_active = False
+    else:
+        customer_item.is_active = True
+    customer_item.save()
+    return redirect(reverse('main:customer_list'))
+
+
+def set_status_sending(request, pk):
+    sending_item = get_object_or_404(Sending, pk=pk)  # get_object_or_404 ищет объект модели если не находит выводит ошибку
+    if sending_item.status == Sending.CREATED:
+        sending_item.status = Sending.COMPLETED
+        sending_item.save()
+    else:
+        sending_item.status = Sending.CREATED
+        sending_item.save()
+    return redirect(reverse('main:sending_list'))

@@ -17,6 +17,13 @@
                         <ul class="list-unstyled mt-3 mb-4">
                             <li class="card-title pricing-card-title">{{ object.created_by }}</li>
                         </ul>
+                        <a href="{% url 'main:set_is_active' object.pk %}" class="btn btn-outline-warning float-end">
+                            {% if object.is_active %}
+                                Деактивировать
+                            {% else %}
+                                Активировать
+                            {% endif %}
+                        </a>
                     </div>
                 </div>
             </table>
