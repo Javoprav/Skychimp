@@ -18,10 +18,9 @@ class IndexView(TemplateView):
 
 class CustomerListView(LoginRequiredMixin, ListView):
     model = Customer
-    # permission_required = 'main.view_customer'
     extra_context = {
         'object_list': Customer.objects.all(),
-        'title': 'Все клиенты'  # дополнение к статической информации
+        'title': 'Все клиенты'
     }
 
     def get_queryset(self):
@@ -29,12 +28,6 @@ class CustomerListView(LoginRequiredMixin, ListView):
         if self.request.user.has_perm('main.view_client'):
             return queryset
         return Customer.objects.filter(created_by=self.request.user)
-
-    # def get_object(self, queryset=None):
-    #     self.object = super().get_object(queryset)
-    #     if self.object.user != self.request.user:
-    #         raise Http404("Вы не являетесь владельцем этого товара")
-    #     return self.object
 
 
 class CustomerDetailView(LoginRequiredMixin, DetailView):
@@ -64,7 +57,7 @@ class MessageListView(LoginRequiredMixin, ListView):
     model = Message
     extra_context = {
         'message_list': Message.objects.all(),
-        'title': 'Все Сообщения'  # дополнение к статической информации
+        'title': 'Все Сообщения'
     }
 
 
@@ -133,7 +126,7 @@ class AttemptListView(LoginRequiredMixin, ListView):
     model = Attempt
     extra_context = {
         'object_list': Attempt.objects.all(),
-        'title': 'Все Рассылки'  # дополнение к статической информации
+        'title': 'Все Рассылки'
     }
 
 
@@ -142,7 +135,7 @@ class AttemptDetailView(LoginRequiredMixin, DetailView):
 
 
 def set_is_active(request, pk):
-    customer_item = get_object_or_404(Customer, pk=pk)  # get_object_or_404 ищет объект модели если не находит выводит ошибку
+    customer_item = get_object_or_404(Customer, pk=pk)
     if customer_item.is_active:
         customer_item.is_active = False
     else:
@@ -152,7 +145,7 @@ def set_is_active(request, pk):
 
 
 def set_status_sending(request, pk):
-    sending_item = get_object_or_404(Sending, pk=pk)  # get_object_or_404 ищет объект модели если не находит выводит ошибку
+    sending_item = get_object_or_404(Sending, pk=pk)
     if sending_item.status == Sending.CREATED:
         sending_item.status = Sending.COMPLETED
         sending_item.save()
