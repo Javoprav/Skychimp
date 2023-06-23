@@ -1,11 +1,12 @@
+from random import sample
+
 from django.shortcuts import render, reverse, get_object_or_404, redirect
 from django.urls import reverse_lazy
 from django.views.generic import ListView, DetailView, CreateView, UpdateView, DeleteView, TemplateView
-from django.conf import settings
-from django.http import Http404
+from blog.models import Post
 from main.models import *
 from main.services import send_email
-from django.contrib.auth.mixins import LoginRequiredMixin, PermissionRequiredMixin, UserPassesTestMixin
+from django.contrib.auth.mixins import LoginRequiredMixin
 
 
 class IndexView(TemplateView):
@@ -14,6 +15,12 @@ class IndexView(TemplateView):
         'title': 'Главная страница',
         'object_list': Sending.objects.all()
     }
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        all_posts = list(Post.objects.all())
+        context['random_blog_posts'] = sample(all_posts, min(3, len(all_posts)))
+        return context
 
 
 class CustomerListView(LoginRequiredMixin, ListView):

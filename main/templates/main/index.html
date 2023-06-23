@@ -2,13 +2,9 @@
 {% load sending_count %}
 {% load active_sending_count %}
 {% load active_customer_count %}
-{% block content %}  <!-- ШАБЛОННЫЙ ТЕГ for content -->
-    {#    {% for object in object_list %}#}
-    <!-- ШАБЛОННЫЙ ТЕГ for, цикл по студентам из ключа views.py context object_list -->
-    {#        {% include 'main/includes/inc_sending_card.html' %} <!-- выводит подшаблон inc_student_card.html -->#}
+{% block content %}
     <div class="row gy-5">
         <h5> Сервис рассылки сообщений</h5>
-
         <div class="col">
             <div class="card shadow-sm text-center" style="background: #e0e0e0">
                 <figure class="p-3 mb-0">
@@ -20,6 +16,12 @@
                 </figure>
             </div>
         </div>
+        <div class="card shadow-sm text-center" style="background: #e0e0e0">
+            <figure class="p-0 mb-0">
+                {% for object in random_blog_posts %}
+                    {% include 'blog/includes/inc_post_card.html' %}
+                {% endfor %}
+            </figure>
+        </div>
     </div>
-    {#    {% endfor %}   <!-- закрытие цикла for -->#}
-{% endblock %}   <!-- закрытие ШАБЛОННЫЙ ТЕГ for content -->
+{% endblock %}
