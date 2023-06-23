@@ -137,8 +137,8 @@ EMAIL_HOST = 'smtp.yandex.com'
 EMAIL_PORT = 465
 EMAIL_HOST_USER = os.getenv("EMAIL_HOST_USER")
 EMAIL_HOST_PASSWORD = os.getenv("EMAIL_HOST_PASSWORD")
-EMAIL_USE_TLS = False  # у gmail наоборот True
-EMAIL_USE_SSL = True  # у gmail наоборот False
+EMAIL_USE_TLS = False
+EMAIL_USE_SSL = True
 
 CRONJOBS = [
     ('0 12 * * *', 'main.services.send_email', ['1 раз в день']),

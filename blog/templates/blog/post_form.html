@@ -1,10 +1,11 @@
-{% extends 'main/base.html' %} <!-- Выводит базовый html (верхняя, базовая часть сайта) -->
+{% extends 'main/base.html' %}
 
-{% block content %}  <!-- ШАБЛОННЫЙ ТЕГ for content -->
+{% block content %}
     <div class="col">
         <div class="card">
             <div class="card-body">
-                <form action="" enctype="multipart/form-data" method="post">{% csrf_token %}
+                <form action="" enctype="multipart/form-data" method="post">
+                    {% csrf_token %}
                     {{ form.as_p }}
                     <input type="submit" class="btn btn-success"
                            value="{% if object %}Сохранить{% else %} Создать {% endif %}">
@@ -15,4 +16,4 @@
             </div>
         </div>
     </div>
-{% endblock %}   <!-- закрытие ШАБЛОННЫЙ ТЕГ for content -->
+{% endblock %}

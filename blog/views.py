@@ -39,16 +39,16 @@ class PostCreateView(CreateView):
 
 class PostUpdateView(UpdateView):
     model = Post
-    fields = ('title', 'slug', 'content', 'preview',)
+    fields = ('title', 'slug', 'content', 'preview', 'created_by')
 
     def get_success_url(self):
         return reverse('blog:post_detail', args=[str(self.object.slug)])
 
-    def get_object(self, queryset=None):
-        self.object = super().get_object(queryset)
-        if self.object.user != self.request.user:
-            raise Http404("Вы не являетесь владельцем этого товара")
-        return self.object
+    # def get_object(self, queryset=None):
+    #     self.object = super().get_object(queryset)
+    #     if self.object.user != self.request.user:
+    #         raise Http404("Вы не являетесь владельцем этого товара")
+    #     return self.object
 
 
 class PostDeleteView(DeleteView):
