@@ -16,12 +16,8 @@
                 </figure>
             </div>
         </div>
-        <div class="card shadow-sm text-center" style="background: #e0e0e0">
-            <figure class="p-0 mb-0">
-                {% for object in random_blog_posts %}
-                    {% include 'blog/includes/inc_post_card.html' %}
-                {% endfor %}
-            </figure>
-        </div>
     </div>
+    {% for object in random_blog_posts %}
+        {% include 'blog/includes/inc_post_card.html' %}
+    {% endfor %}
 {% endblock %}
