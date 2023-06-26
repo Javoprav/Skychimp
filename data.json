@@ -1,1 +1,940 @@
-[{"model": "admin.logentry", "pk": 1, "fields": {"action_time": "2023-06-22T11:42:03.407Z", "user": 1, "content_type": 10, "object_id": "2", "object_repr": "swarog88@yandex.ru", "action_flag": 2, "change_message": "[{\"changed\": {\"fields\": [\"Active\"]}}]"}}, {"model": "admin.logentry", "pk": 2, "fields": {"action_time": "2023-06-22T11:54:23.665Z", "user": 1, "content_type": 10, "object_id": "3", "object_repr": "test@mail.com", "action_flag": 2, "change_message": "[{\"changed\": {\"fields\": [\"Active\"]}}]"}}, {"model": "admin.logentry", "pk": 3, "fields": {"action_time": "2023-06-22T13:29:06.073Z", "user": 1, "content_type": 8, "object_id": "4", "object_repr": "раз в месяц", "action_flag": 2, "change_message": "[{\"changed\": {\"fields\": [\"\\u041a\\u0435\\u043c \\u0441\\u043e\\u0437\\u0434\\u0430\\u043d\\u043e\"]}}]"}}, {"model": "admin.logentry", "pk": 4, "fields": {"action_time": "2023-06-22T13:50:22.106Z", "user": 1, "content_type": 3, "object_id": "1", "object_repr": "moder", "action_flag": 1, "change_message": "[{\"added\": {}}]"}}, {"model": "admin.logentry", "pk": 5, "fields": {"action_time": "2023-06-22T13:56:42.171Z", "user": 1, "content_type": 3, "object_id": "1", "object_repr": "moder", "action_flag": 2, "change_message": "[{\"changed\": {\"fields\": [\"Permissions\"]}}]"}}, {"model": "admin.logentry", "pk": 6, "fields": {"action_time": "2023-06-22T13:58:13.501Z", "user": 1, "content_type": 3, "object_id": "1", "object_repr": "moder", "action_flag": 2, "change_message": "[]"}}, {"model": "admin.logentry", "pk": 7, "fields": {"action_time": "2023-06-22T14:00:36.841Z", "user": 1, "content_type": 3, "object_id": "1", "object_repr": "moder", "action_flag": 2, "change_message": "[{\"changed\": {\"fields\": [\"Permissions\"]}}]"}}, {"model": "admin.logentry", "pk": 8, "fields": {"action_time": "2023-06-22T20:44:37.310Z", "user": 1, "content_type": 10, "object_id": "4", "object_repr": "moder@moder.ru", "action_flag": 2, "change_message": "[{\"changed\": {\"fields\": [\"Groups\", \"Active\"]}}]"}}, {"model": "admin.logentry", "pk": 9, "fields": {"action_time": "2023-06-22T20:44:45.100Z", "user": 1, "content_type": 10, "object_id": "4", "object_repr": "moder@moder.ru", "action_flag": 2, "change_message": "[{\"changed\": {\"fields\": [\"Staff status\"]}}]"}}, {"model": "admin.logentry", "pk": 10, "fields": {"action_time": "2023-06-22T20:47:53.486Z", "user": 1, "content_type": 3, "object_id": "1", "object_repr": "moder", "action_flag": 2, "change_message": "[{\"changed\": {\"fields\": [\"Permissions\"]}}]"}}, {"model": "admin.logentry", "pk": 11, "fields": {"action_time": "2023-06-23T07:04:26.684Z", "user": 1, "content_type": 3, "object_id": "1", "object_repr": "moder", "action_flag": 2, "change_message": "[{\"changed\": {\"fields\": [\"Permissions\"]}}]"}}, {"model": "admin.logentry", "pk": 12, "fields": {"action_time": "2023-06-23T07:18:52.288Z", "user": 1, "content_type": 3, "object_id": "1", "object_repr": "moder", "action_flag": 2, "change_message": "[]"}}, {"model": "admin.logentry", "pk": 13, "fields": {"action_time": "2023-06-23T07:19:08.989Z", "user": 1, "content_type": 3, "object_id": "1", "object_repr": "moder", "action_flag": 2, "change_message": "[{\"changed\": {\"fields\": [\"Permissions\"]}}]"}}, {"model": "admin.logentry", "pk": 14, "fields": {"action_time": "2023-06-23T07:38:10.121Z", "user": 1, "content_type": 10, "object_id": "4", "object_repr": "moder@moder.ru", "action_flag": 2, "change_message": "[]"}}, {"model": "admin.logentry", "pk": 15, "fields": {"action_time": "2023-06-23T16:57:38.190Z", "user": 1, "content_type": 11, "object_id": "1", "object_repr": "Новый Пост", "action_flag": 1, "change_message": "[{\"added\": {}}]"}}, {"model": "admin.logentry", "pk": 16, "fields": {"action_time": "2023-06-26T17:36:54.906Z", "user": 1, "content_type": 6, "object_id": "7", "object_repr": "test1@gmail.com", "action_flag": 1, "change_message": "[{\"added\": {}}]"}}, {"model": "admin.logentry", "pk": 17, "fields": {"action_time": "2023-06-26T17:37:29.534Z", "user": 1, "content_type": 6, "object_id": "8", "object_repr": "test2@gmail.com", "action_flag": 1, "change_message": "[{\"added\": {}}]"}}, {"model": "admin.logentry", "pk": 18, "fields": {"action_time": "2023-06-26T17:37:52.207Z", "user": 1, "content_type": 6, "object_id": "9", "object_repr": "test-3@gmail.com", "action_flag": 1, "change_message": "[{\"added\": {}}]"}}, {"model": "admin.logentry", "pk": 19, "fields": {"action_time": "2023-06-26T17:38:08.051Z", "user": 1, "content_type": 11, "object_id": "4", "object_repr": "new-4", "action_flag": 3, "change_message": ""}}, {"model": "admin.logentry", "pk": 20, "fields": {"action_time": "2023-06-26T17:38:08.056Z", "user": 1, "content_type": 11, "object_id": "3", "object_repr": "new-3", "action_flag": 3, "change_message": ""}}, {"model": "admin.logentry", "pk": 21, "fields": {"action_time": "2023-06-26T17:38:08.059Z", "user": 1, "content_type": 11, "object_id": "2", "object_repr": "new", "action_flag": 3, "change_message": ""}}, {"model": "admin.logentry", "pk": 22, "fields": {"action_time": "2023-06-26T17:38:08.063Z", "user": 1, "content_type": 11, "object_id": "1", "object_repr": "Новый Пост", "action_flag": 3, "change_message": ""}}, {"model": "admin.logentry", "pk": 23, "fields": {"action_time": "2023-06-26T17:38:15.441Z", "user": 1, "content_type": 8, "object_id": "7", "object_repr": "раз в месяц", "action_flag": 3, "change_message": ""}}, {"model": "admin.logentry", "pk": 24, "fields": {"action_time": "2023-06-26T17:38:15.445Z", "user": 1, "content_type": 8, "object_id": "3", "object_repr": "раз в неделю", "action_flag": 3, "change_message": ""}}, {"model": "admin.logentry", "pk": 25, "fields": {"action_time": "2023-06-26T17:38:15.448Z", "user": 1, "content_type": 8, "object_id": "2", "object_repr": "раз в день", "action_flag": 3, "change_message": ""}}, {"model": "admin.logentry", "pk": 26, "fields": {"action_time": "2023-06-26T17:38:20.307Z", "user": 1, "content_type": 7, "object_id": "4", "object_repr": "раз в месяц", "action_flag": 3, "change_message": ""}}, {"model": "admin.logentry", "pk": 27, "fields": {"action_time": "2023-06-26T17:38:20.311Z", "user": 1, "content_type": 7, "object_id": "3", "object_repr": "раз в неделю", "action_flag": 3, "change_message": ""}}, {"model": "admin.logentry", "pk": 28, "fields": {"action_time": "2023-06-26T17:38:20.314Z", "user": 1, "content_type": 7, "object_id": "2", "object_repr": "раз в день", "action_flag": 3, "change_message": ""}}, {"model": "admin.logentry", "pk": 29, "fields": {"action_time": "2023-06-26T17:38:20.317Z", "user": 1, "content_type": 7, "object_id": "1", "object_repr": "Один раз", "action_flag": 3, "change_message": ""}}, {"model": "admin.logentry", "pk": 30, "fields": {"action_time": "2023-06-26T17:38:30.121Z", "user": 1, "content_type": 10, "object_id": "4", "object_repr": "moder@moder.ru", "action_flag": 3, "change_message": ""}}, {"model": "admin.logentry", "pk": 31, "fields": {"action_time": "2023-06-26T17:38:30.126Z", "user": 1, "content_type": 10, "object_id": "3", "object_repr": "test@mail.com", "action_flag": 3, "change_message": ""}}, {"model": "admin.logentry", "pk": 32, "fields": {"action_time": "2023-06-26T17:38:30.129Z", "user": 1, "content_type": 10, "object_id": "2", "object_repr": "swarog88@yandex.ru", "action_flag": 3, "change_message": ""}}, {"model": "admin.logentry", "pk": 33, "fields": {"action_time": "2023-06-26T17:39:31.044Z", "user": 1, "content_type": 11, "object_id": "5", "object_repr": "Test", "action_flag": 1, "change_message": "[{\"added\": {}}]"}}, {"model": "admin.logentry", "pk": 34, "fields": {"action_time": "2023-06-26T17:39:53.811Z", "user": 1, "content_type": 11, "object_id": "6", "object_repr": "test2", "action_flag": 1, "change_message": "[{\"added\": {}}]"}}, {"model": "admin.logentry", "pk": 35, "fields": {"action_time": "2023-06-26T17:40:08.370Z", "user": 1, "content_type": 11, "object_id": "7", "object_repr": "test3", "action_flag": 1, "change_message": "[{\"added\": {}}]"}}, {"model": "admin.logentry", "pk": 36, "fields": {"action_time": "2023-06-26T17:40:29.488Z", "user": 1, "content_type": 11, "object_id": "8", "object_repr": "test4", "action_flag": 1, "change_message": "[{\"added\": {}}]"}}, {"model": "admin.logentry", "pk": 37, "fields": {"action_time": "2023-06-26T17:41:00.664Z", "user": 1, "content_type": 6, "object_id": "10", "object_repr": "test5@gmail.com", "action_flag": 1, "change_message": "[{\"added\": {}}]"}}, {"model": "admin.logentry", "pk": 38, "fields": {"action_time": "2023-06-26T17:41:31.118Z", "user": 1, "content_type": 7, "object_id": "5", "object_repr": "Один раз", "action_flag": 1, "change_message": "[{\"added\": {}}]"}}, {"model": "admin.logentry", "pk": 39, "fields": {"action_time": "2023-06-26T17:42:00.298Z", "user": 1, "content_type": 7, "object_id": "6", "object_repr": "раз в день", "action_flag": 1, "change_message": "[{\"added\": {}}]"}}, {"model": "admin.logentry", "pk": 40, "fields": {"action_time": "2023-06-26T17:42:22.064Z", "user": 1, "content_type": 7, "object_id": "7", "object_repr": "раз в неделю", "action_flag": 1, "change_message": "[{\"added\": {}}]"}}, {"model": "admin.logentry", "pk": 41, "fields": {"action_time": "2023-06-26T17:42:36.237Z", "user": 1, "content_type": 7, "object_id": "8", "object_repr": "раз в месяц", "action_flag": 1, "change_message": "[{\"added\": {}}]"}}, {"model": "admin.logentry", "pk": 42, "fields": {"action_time": "2023-06-26T17:42:50.877Z", "user": 1, "content_type": 8, "object_id": "8", "object_repr": "раз в день", "action_flag": 1, "change_message": "[{\"added\": {}}]"}}, {"model": "admin.logentry", "pk": 43, "fields": {"action_time": "2023-06-26T17:43:00.420Z", "user": 1, "content_type": 8, "object_id": "9", "object_repr": "раз в неделю", "action_flag": 1, "change_message": "[{\"added\": {}}]"}}, {"model": "admin.logentry", "pk": 44, "fields": {"action_time": "2023-06-26T17:43:07.972Z", "user": 1, "content_type": 8, "object_id": "10", "object_repr": "раз в месяц", "action_flag": 1, "change_message": "[{\"added\": {}}]"}}, {"model": "auth.permission", "pk": 1, "fields": {"name": "Can add log entry", "content_type": 1, "codename": "add_logentry"}}, {"model": "auth.permission", "pk": 2, "fields": {"name": "Can change log entry", "content_type": 1, "codename": "change_logentry"}}, {"model": "auth.permission", "pk": 3, "fields": {"name": "Can delete log entry", "content_type": 1, "codename": "delete_logentry"}}, {"model": "auth.permission", "pk": 4, "fields": {"name": "Can view log entry", "content_type": 1, "codename": "view_logentry"}}, {"model": "auth.permission", "pk": 5, "fields": {"name": "Can add permission", "content_type": 2, "codename": "add_permission"}}, {"model": "auth.permission", "pk": 6, "fields": {"name": "Can change permission", "content_type": 2, "codename": "change_permission"}}, {"model": "auth.permission", "pk": 7, "fields": {"name": "Can delete permission", "content_type": 2, "codename": "delete_permission"}}, {"model": "auth.permission", "pk": 8, "fields": {"name": "Can view permission", "content_type": 2, "codename": "view_permission"}}, {"model": "auth.permission", "pk": 9, "fields": {"name": "Can add group", "content_type": 3, "codename": "add_group"}}, {"model": "auth.permission", "pk": 10, "fields": {"name": "Can change group", "content_type": 3, "codename": "change_group"}}, {"model": "auth.permission", "pk": 11, "fields": {"name": "Can delete group", "content_type": 3, "codename": "delete_group"}}, {"model": "auth.permission", "pk": 12, "fields": {"name": "Can view group", "content_type": 3, "codename": "view_group"}}, {"model": "auth.permission", "pk": 13, "fields": {"name": "Can add content type", "content_type": 4, "codename": "add_contenttype"}}, {"model": "auth.permission", "pk": 14, "fields": {"name": "Can change content type", "content_type": 4, "codename": "change_contenttype"}}, {"model": "auth.permission", "pk": 15, "fields": {"name": "Can delete content type", "content_type": 4, "codename": "delete_contenttype"}}, {"model": "auth.permission", "pk": 16, "fields": {"name": "Can view content type", "content_type": 4, "codename": "view_contenttype"}}, {"model": "auth.permission", "pk": 17, "fields": {"name": "Can add session", "content_type": 5, "codename": "add_session"}}, {"model": "auth.permission", "pk": 18, "fields": {"name": "Can change session", "content_type": 5, "codename": "change_session"}}, {"model": "auth.permission", "pk": 19, "fields": {"name": "Can delete session", "content_type": 5, "codename": "delete_session"}}, {"model": "auth.permission", "pk": 20, "fields": {"name": "Can view session", "content_type": 5, "codename": "view_session"}}, {"model": "auth.permission", "pk": 21, "fields": {"name": "Can add Клиент", "content_type": 6, "codename": "add_customer"}}, {"model": "auth.permission", "pk": 22, "fields": {"name": "Can change Клиент", "content_type": 6, "codename": "change_customer"}}, {"model": "auth.permission", "pk": 23, "fields": {"name": "Can delete Клиент", "content_type": 6, "codename": "delete_customer"}}, {"model": "auth.permission", "pk": 24, "fields": {"name": "Can view Клиент", "content_type": 6, "codename": "view_customer"}}, {"model": "auth.permission", "pk": 25, "fields": {"name": "Can add Сообщение", "content_type": 7, "codename": "add_message"}}, {"model": "auth.permission", "pk": 26, "fields": {"name": "Can change Сообщение", "content_type": 7, "codename": "change_message"}}, {"model": "auth.permission", "pk": 27, "fields": {"name": "Can delete Сообщение", "content_type": 7, "codename": "delete_message"}}, {"model": "auth.permission", "pk": 28, "fields": {"name": "Can view Сообщение", "content_type": 7, "codename": "view_message"}}, {"model": "auth.permission", "pk": 29, "fields": {"name": "Can add Рассылка", "content_type": 8, "codename": "add_sending"}}, {"model": "auth.permission", "pk": 30, "fields": {"name": "Can change Рассылка", "content_type": 8, "codename": "change_sending"}}, {"model": "auth.permission", "pk": 31, "fields": {"name": "Can delete Рассылка", "content_type": 8, "codename": "delete_sending"}}, {"model": "auth.permission", "pk": 32, "fields": {"name": "Can view Рассылка", "content_type": 8, "codename": "view_sending"}}, {"model": "auth.permission", "pk": 33, "fields": {"name": "Can add Статистика (попытка)", "content_type": 9, "codename": "add_attempt"}}, {"model": "auth.permission", "pk": 34, "fields": {"name": "Can change Статистика (попытка)", "content_type": 9, "codename": "change_attempt"}}, {"model": "auth.permission", "pk": 35, "fields": {"name": "Can delete Статистика (попытка)", "content_type": 9, "codename": "delete_attempt"}}, {"model": "auth.permission", "pk": 36, "fields": {"name": "Can view Статистика (попытка)", "content_type": 9, "codename": "view_attempt"}}, {"model": "auth.permission", "pk": 37, "fields": {"name": "Can add user", "content_type": 10, "codename": "add_user"}}, {"model": "auth.permission", "pk": 38, "fields": {"name": "Can change user", "content_type": 10, "codename": "change_user"}}, {"model": "auth.permission", "pk": 39, "fields": {"name": "Can delete user", "content_type": 10, "codename": "delete_user"}}, {"model": "auth.permission", "pk": 40, "fields": {"name": "Can view user", "content_type": 10, "codename": "view_user"}}, {"model": "auth.permission", "pk": 41, "fields": {"name": "Can set sending status", "content_type": 8, "codename": "set_send_status"}}, {"model": "auth.permission", "pk": 42, "fields": {"name": "Can set block users", "content_type": 10, "codename": "set_block_users"}}, {"model": "auth.permission", "pk": 43, "fields": {"name": "Can block users", "content_type": 10, "codename": "can_block_users"}}, {"model": "auth.permission", "pk": 44, "fields": {"name": "Can add Пост", "content_type": 11, "codename": "add_post"}}, {"model": "auth.permission", "pk": 45, "fields": {"name": "Can change Пост", "content_type": 11, "codename": "change_post"}}, {"model": "auth.permission", "pk": 46, "fields": {"name": "Can delete Пост", "content_type": 11, "codename": "delete_post"}}, {"model": "auth.permission", "pk": 47, "fields": {"name": "Can view Пост", "content_type": 11, "codename": "view_post"}}, {"model": "auth.group", "pk": 1, "fields": {"name": "moder", "permissions": [24, 41, 32, 43, 42, 40]}}, {"model": "contenttypes.contenttype", "pk": 1, "fields": {"app_label": "admin", "model": "logentry"}}, {"model": "contenttypes.contenttype", "pk": 2, "fields": {"app_label": "auth", "model": "permission"}}, {"model": "contenttypes.contenttype", "pk": 3, "fields": {"app_label": "auth", "model": "group"}}, {"model": "contenttypes.contenttype", "pk": 4, "fields": {"app_label": "contenttypes", "model": "contenttype"}}, {"model": "contenttypes.contenttype", "pk": 5, "fields": {"app_label": "sessions", "model": "session"}}, {"model": "contenttypes.contenttype", "pk": 6, "fields": {"app_label": "main", "model": "customer"}}, {"model": "contenttypes.contenttype", "pk": 7, "fields": {"app_label": "main", "model": "message"}}, {"model": "contenttypes.contenttype", "pk": 8, "fields": {"app_label": "main", "model": "sending"}}, {"model": "contenttypes.contenttype", "pk": 9, "fields": {"app_label": "main", "model": "attempt"}}, {"model": "contenttypes.contenttype", "pk": 10, "fields": {"app_label": "users", "model": "user"}}, {"model": "contenttypes.contenttype", "pk": 11, "fields": {"app_label": "blog", "model": "post"}}, {"model": "sessions.session", "pk": "0u8flkqt3ieightmu497shg20dare9om", "fields": {"session_data": ".eJxVjEEOwiAQRe_C2pABHBCX7j0DGZipVA1NSrsy3l2bdKHb_977L5VoXWpau8xpZHVWRh1-t0zlIW0DfKd2m3SZ2jKPWW-K3mnX14nledndv4NKvX5rlGMEAwOJ8TZYAcwFETgYCY68nNghsylOSCC6HFxB8jkMYmO0IOr9AdwGN_c:1qCctT:cXIxKoRqH7xwsirC-UZV3cmTL2IeCia3peVnXz5qV1E", "expire_date": "2023-07-07T09:15:51.268Z"}}, {"model": "sessions.session", "pk": "5jxpt0prn2r1s14sgi8bs590e3hsch1v", "fields": {"session_data": ".eJxVjEEOwiAQRe_C2pABHBCX7j0DGZipVA1NSrsy3l2bdKHb_977L5VoXWpau8xpZHVWRh1-t0zlIW0DfKd2m3SZ2jKPWW-K3mnX14nledndv4NKvX5rlGMEAwOJ8TZYAcwFETgYCY68nNghsylOSCC6HFxB8jkMYmO0IOr9AdwGN_c:1qCjWy:RiPNYQWGaJr2smvnnRiUilj6W7VIDI3zae0Bs7k95zQ", "expire_date": "2023-07-07T16:21:04.990Z"}}, {"model": "sessions.session", "pk": "gasvg7flc9w7x3i0kzpg63lwc3mbext3", "fields": {"session_data": ".eJxVjEEOwiAQRe_C2pABHBCX7j0DGZipVA1NSrsy3l2bdKHb_977L5VoXWpau8xpZHVWRh1-t0zlIW0DfKd2m3SZ2jKPWW-K3mnX14nledndv4NKvX5rlGMEAwOJ8TZYAcwFETgYCY68nNghsylOSCC6HFxB8jkMYmO0IOr9AdwGN_c:1qD3oC:MoY1C5e5IISzT0BQzYyxjgmPmL54zMubXB4LfwCTxvo", "expire_date": "2023-07-08T14:00:12.260Z"}}, {"model": "sessions.session", "pk": "hx69ctly201vqyfe7l5smjrd1vktzp0g", "fields": {"session_data": ".eJxVjEEOwiAQRe_C2pABHBCX7j0DGZipVA1NSrsy3l2bdKHb_977L5VoXWpau8xpZHVWRh1-t0zlIW0DfKd2m3SZ2jKPWW-K3mnX14nledndv4NKvX5rlGMEAwOJ8TZYAcwFETgYCY68nNghsylOSCC6HFxB8jkMYmO0IOr9AdwGN_c:1qCRXh:rvrNe-zL2wAr4cUEaOHjEII-vQsYLQ-H_VuGIgFtlFw", "expire_date": "2023-07-06T21:08:37.124Z"}}, {"model": "sessions.session", "pk": "ijbze12bz9rel2f9256qo4vsg88am4h9", "fields": {"session_data": ".eJxVjMEOwiAQRP-FsyGw2xTw6N1vIAssUjWQlPbU-O-2SQ96m8x7M5vwtC7Fr51nPyVxFSguv12g-OJ6gPSk-mgytrrMU5CHIk_a5b0lft9O9--gUC_72hHCgBisg7THoDEyAisIAxJD1tFlMzIko61yeXQxq9FkcKQBbUTx-QLU3zdt:1qCd3A:xa2snHOCAsnJ1D_tghyD8BrVIdf_ePW30enrhiIq6OI", "expire_date": "2023-07-07T09:25:52.247Z"}}, {"model": "sessions.session", "pk": "lqml941hy9iveu9dlkt9da47bfx6at7d", "fields": {"session_data": ".eJxVjEEOwiAQRe_C2pABHBCX7j0DGZipVA1NSrsy3l2bdKHb_977L5VoXWpau8xpZHVWRh1-t0zlIW0DfKd2m3SZ2jKPWW-K3mnX14nledndv4NKvX5rlGMEAwOJ8TZYAcwFETgYCY68nNghsylOSCC6HFxB8jkMYmO0IOr9AdwGN_c:1qCKc5:jnpPXqOBVL0JZEujJtGeRxWI857i03DZCgXVgNcRlUI", "expire_date": "2023-07-06T13:44:41.244Z"}}, {"model": "sessions.session", "pk": "u3eyrw0txncm364nuksluxg9tkp8wtrt", "fields": {"session_data": ".eJxVjDsOwyAQBe9CHSG-JqRM7zOgZVmCkwgkY1dR7m5bcpG0b2behwVYlxLWTnOYErsxwy6_WwR8UT1AekJ9NI6tLvMU-aHwk3Y-tkTv--n-HRToZa9RoFU5GqklgFCacnbGaLSert5LNAIUWSA7QEYJkZxMQ4oOlENUiOy7AfNHONg:1qCRBD:_FdLpGTsHZYvulUKlJEenj1C4NN-dMHjI_3yv3R5RhA", "expire_date": "2023-07-06T20:45:23.440Z"}}, {"model": "sessions.session", "pk": "xayj02l8evbpelmxdpq7px1f1xvlttzv", "fields": {"session_data": ".eJxVjEEOwiAQRe_C2pABHBCX7j0DGZipVA1NSrsy3l2bdKHb_977L5VoXWpau8xpZHVWRh1-t0zlIW0DfKd2m3SZ2jKPWW-K3mnX14nledndv4NKvX5rlGMEAwOJ8TZYAcwFETgYCY68nNghsylOSCC6HFxB8jkMYmO0IOr9AdwGN_c:1qDq6Y:b_YX6RB43hyJLAtVHi6euO1q03t-LSiC7VZphlOodnA", "expire_date": "2023-07-10T17:34:22.068Z"}}, {"model": "sessions.session", "pk": "xgewk9gdoeq34x0ayrl31yac5dd181ht", "fields": {"session_data": ".eJxVjEEOwiAQRe_C2pABHBCX7j0DGZipVA1NSrsy3l2bdKHb_977L5VoXWpau8xpZHVWRh1-t0zlIW0DfKd2m3SZ2jKPWW-K3mnX14nledndv4NKvX5rlGMEAwOJ8TZYAcwFETgYCY68nNghsylOSCC6HFxB8jkMYmO0IOr9AdwGN_c:1qCmqA:zSJVUAW1VXi8pL8ypsUArbYvTvxN0H8GA1xH60T46NA", "expire_date": "2023-07-07T19:53:06.206Z"}}, {"model": "main.customer", "pk": 7, "fields": {"name": "Maksim Petrov", "email": "test1@gmail.com", "comment": "test1@gmail.comtest1@gmail.comtest1@gmail.comtest1@gmail.comtest1@gmail.comtest1@gmail.comtest1@gmail.com", "created_by": 1, "is_active": true}}, {"model": "main.customer", "pk": 8, "fields": {"name": "Maksim Petrov-2", "email": "test2@gmail.com", "comment": "test2@gmail.comtest2@gmail.comtest2@gmail.comtest2@gmail.comtest2@gmail.comtest2@gmail.comtest2@gmail.comtest2@gmail.comtest2@gmail.com", "created_by": 1, "is_active": true}}, {"model": "main.customer", "pk": 9, "fields": {"name": "Maksim Petrov-3", "email": "test-3@gmail.com", "comment": "test-3@gmail.comtest-3@gmail.comtest-3@gmail.comtest-3@gmail.comtest-3@gmail.comtest-3@gmail.comtest-3@gmail.com", "created_by": 1, "is_active": true}}, {"model": "main.customer", "pk": 10, "fields": {"name": "Maksim Petrov-5", "email": "test5@gmail.com", "comment": "test5@gmail.comtest5@gmail.comtest5@gmail.comtest5@gmail.comtest5@gmail.comtest5@gmail.com", "created_by": 1, "is_active": true}}, {"model": "main.message", "pk": 5, "fields": {"subject": "Один раз", "body": "Отправка Один раз", "created_at": "2023-06-26T17:41:31.116Z"}}, {"model": "main.message", "pk": 6, "fields": {"subject": "раз в день", "body": "Отправка раз в день", "created_at": "2023-06-26T17:42:00.296Z"}}, {"model": "main.message", "pk": 7, "fields": {"subject": "раз в неделю", "body": "Отправка раз в неделю", "created_at": "2023-06-26T17:42:22.061Z"}}, {"model": "main.message", "pk": 8, "fields": {"subject": "раз в месяц", "body": "Отправка раз в месяц", "created_at": "2023-06-26T17:42:36.234Z"}}, {"model": "main.sending", "pk": 8, "fields": {"message": 6, "created_at": "2023-06-26T17:42:50.874Z", "scheduled_time": "17:42:50.874", "frequency": "1 раз в день", "status": "Создана", "created": 1}}, {"model": "main.sending", "pk": 9, "fields": {"message": 7, "created_at": "2023-06-26T17:43:00.417Z", "scheduled_time": "17:43:00.417", "frequency": "1 раз в неделю", "status": "Создана", "created": 1}}, {"model": "main.sending", "pk": 10, "fields": {"message": 8, "created_at": "2023-06-26T17:43:07.970Z", "scheduled_time": "17:43:07.970", "frequency": "1 раз в месяц", "status": "Создана", "created": 1}}, {"model": "users.user", "pk": 1, "fields": {"password": "pbkdf2_sha256$600000$eNRDg1I6eRLpPcHR3NXb5X$gc0+SejnKg7ZN4wJJs9VOCL+IiK0T2K7KJeQTW+m6Vw=", "last_login": "2023-06-26T17:34:22.063Z", "is_superuser": true, "first_name": "", "last_name": "", "is_staff": true, "date_joined": "2023-06-22T11:35:07.500Z", "email": "javoprav@gmail.com", "token": null, "token_time": "2023-06-22T11:35:08.055Z", "is_active": true, "groups": [], "user_permissions": []}}, {"model": "blog.post", "pk": 5, "fields": {"title": "Test", "slug": "test", "content": "TestTestTestTestTestTestTest", "preview": "blog/Hd-Nature-1280x720_aBVx4zK.jpg", "created_at": "2023-06-26T17:39:31.041Z", "published": true, "views_count": 0, "created_by": 1}}, {"model": "blog.post", "pk": 6, "fields": {"title": "test2", "slug": "test2", "content": "test2test2test2test2test2test2", "preview": "", "created_at": "2023-06-26T17:39:53.808Z", "published": true, "views_count": 0, "created_by": 1}}, {"model": "blog.post", "pk": 7, "fields": {"title": "test3", "slug": "test3", "content": "test3test3test3test3test3test3test3", "preview": "", "created_at": "2023-06-26T17:40:08.369Z", "published": true, "views_count": 0, "created_by": 1}}, {"model": "blog.post", "pk": 8, "fields": {"title": "test4", "slug": "test4", "content": "test4test4test4test4test4test4test4test4", "preview": "blog/Hd-Nature-1280x720_oW0l56f.jpg", "created_at": "2023-06-26T17:40:29.486Z", "published": true, "views_count": 0, "created_by": 1}}]
+[
+  {
+    "model": "admin.logentry",
+    "pk": 1,
+    "fields": {
+      "action_time": "2023-06-22T11:42:03.407Z",
+      "user": 1,
+      "content_type": 10,
+      "object_id": "2",
+      "object_repr": "swarog88@yandex.ru",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"fields\": [\"Active\"]}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 2,
+    "fields": {
+      "action_time": "2023-06-22T11:54:23.665Z",
+      "user": 1,
+      "content_type": 10,
+      "object_id": "3",
+      "object_repr": "test@mail.com",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"fields\": [\"Active\"]}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 3,
+    "fields": {
+      "action_time": "2023-06-22T13:29:06.073Z",
+      "user": 1,
+      "content_type": 8,
+      "object_id": "4",
+      "object_repr": "раз в месяц",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"fields\": [\"\\u041a\\u0435\\u043c \\u0441\\u043e\\u0437\\u0434\\u0430\\u043d\\u043e\"]}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 4,
+    "fields": {
+      "action_time": "2023-06-22T13:50:22.106Z",
+      "user": 1,
+      "content_type": 3,
+      "object_id": "1",
+      "object_repr": "moder",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 5,
+    "fields": {
+      "action_time": "2023-06-22T13:56:42.171Z",
+      "user": 1,
+      "content_type": 3,
+      "object_id": "1",
+      "object_repr": "moder",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"fields\": [\"Permissions\"]}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 6,
+    "fields": {
+      "action_time": "2023-06-22T13:58:13.501Z",
+      "user": 1,
+      "content_type": 3,
+      "object_id": "1",
+      "object_repr": "moder",
+      "action_flag": 2,
+      "change_message": "[]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 7,
+    "fields": {
+      "action_time": "2023-06-22T14:00:36.841Z",
+      "user": 1,
+      "content_type": 3,
+      "object_id": "1",
+      "object_repr": "moder",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"fields\": [\"Permissions\"]}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 8,
+    "fields": {
+      "action_time": "2023-06-22T20:44:37.310Z",
+      "user": 1,
+      "content_type": 10,
+      "object_id": "4",
+      "object_repr": "moder@moder.ru",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"fields\": [\"Groups\", \"Active\"]}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 9,
+    "fields": {
+      "action_time": "2023-06-22T20:44:45.100Z",
+      "user": 1,
+      "content_type": 10,
+      "object_id": "4",
+      "object_repr": "moder@moder.ru",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"fields\": [\"Staff status\"]}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 10,
+    "fields": {
+      "action_time": "2023-06-22T20:47:53.486Z",
+      "user": 1,
+      "content_type": 3,
+      "object_id": "1",
+      "object_repr": "moder",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"fields\": [\"Permissions\"]}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 11,
+    "fields": {
+      "action_time": "2023-06-23T07:04:26.684Z",
+      "user": 1,
+      "content_type": 3,
+      "object_id": "1",
+      "object_repr": "moder",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"fields\": [\"Permissions\"]}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 12,
+    "fields": {
+      "action_time": "2023-06-23T07:18:52.288Z",
+      "user": 1,
+      "content_type": 3,
+      "object_id": "1",
+      "object_repr": "moder",
+      "action_flag": 2,
+      "change_message": "[]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 13,
+    "fields": {
+      "action_time": "2023-06-23T07:19:08.989Z",
+      "user": 1,
+      "content_type": 3,
+      "object_id": "1",
+      "object_repr": "moder",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"fields\": [\"Permissions\"]}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 14,
+    "fields": {
+      "action_time": "2023-06-23T07:38:10.121Z",
+      "user": 1,
+      "content_type": 10,
+      "object_id": "4",
+      "object_repr": "moder@moder.ru",
+      "action_flag": 2,
+      "change_message": "[]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 15,
+    "fields": {
+      "action_time": "2023-06-23T16:57:38.190Z",
+      "user": 1,
+      "content_type": 11,
+      "object_id": "1",
+      "object_repr": "Новый Пост",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 16,
+    "fields": {
+      "action_time": "2023-06-26T17:36:54.906Z",
+      "user": 1,
+      "content_type": 6,
+      "object_id": "7",
+      "object_repr": "test1@gmail.com",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 17,
+    "fields": {
+      "action_time": "2023-06-26T17:37:29.534Z",
+      "user": 1,
+      "content_type": 6,
+      "object_id": "8",
+      "object_repr": "test2@gmail.com",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 18,
+    "fields": {
+      "action_time": "2023-06-26T17:37:52.207Z",
+      "user": 1,
+      "content_type": 6,
+      "object_id": "9",
+      "object_repr": "test-3@gmail.com",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 19,
+    "fields": {
+      "action_time": "2023-06-26T17:38:08.051Z",
+      "user": 1,
+      "content_type": 11,
+      "object_id": "4",
+      "object_repr": "new-4",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 20,
+    "fields": {
+      "action_time": "2023-06-26T17:38:08.056Z",
+      "user": 1,
+      "content_type": 11,
+      "object_id": "3",
+      "object_repr": "new-3",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 21,
+    "fields": {
+      "action_time": "2023-06-26T17:38:08.059Z",
+      "user": 1,
+      "content_type": 11,
+      "object_id": "2",
+      "object_repr": "new",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 22,
+    "fields": {
+      "action_time": "2023-06-26T17:38:08.063Z",
+      "user": 1,
+      "content_type": 11,
+      "object_id": "1",
+      "object_repr": "Новый Пост",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 23,
+    "fields": {
+      "action_time": "2023-06-26T17:38:15.441Z",
+      "user": 1,
+      "content_type": 8,
+      "object_id": "7",
+      "object_repr": "раз в месяц",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 24,
+    "fields": {
+      "action_time": "2023-06-26T17:38:15.445Z",
+      "user": 1,
+      "content_type": 8,
+      "object_id": "3",
+      "object_repr": "раз в неделю",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 25,
+    "fields": {
+      "action_time": "2023-06-26T17:38:15.448Z",
+      "user": 1,
+      "content_type": 8,
+      "object_id": "2",
+      "object_repr": "раз в день",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 26,
+    "fields": {
+      "action_time": "2023-06-26T17:38:20.307Z",
+      "user": 1,
+      "content_type": 7,
+      "object_id": "4",
+      "object_repr": "раз в месяц",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 27,
+    "fields": {
+      "action_time": "2023-06-26T17:38:20.311Z",
+      "user": 1,
+      "content_type": 7,
+      "object_id": "3",
+      "object_repr": "раз в неделю",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 28,
+    "fields": {
+      "action_time": "2023-06-26T17:38:20.314Z",
+      "user": 1,
+      "content_type": 7,
+      "object_id": "2",
+      "object_repr": "раз в день",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 29,
+    "fields": {
+      "action_time": "2023-06-26T17:38:20.317Z",
+      "user": 1,
+      "content_type": 7,
+      "object_id": "1",
+      "object_repr": "Один раз",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 30,
+    "fields": {
+      "action_time": "2023-06-26T17:38:30.121Z",
+      "user": 1,
+      "content_type": 10,
+      "object_id": "4",
+      "object_repr": "moder@moder.ru",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 31,
+    "fields": {
+      "action_time": "2023-06-26T17:38:30.126Z",
+      "user": 1,
+      "content_type": 10,
+      "object_id": "3",
+      "object_repr": "test@mail.com",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 32,
+    "fields": {
+      "action_time": "2023-06-26T17:38:30.129Z",
+      "user": 1,
+      "content_type": 10,
+      "object_id": "2",
+      "object_repr": "swarog88@yandex.ru",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 33,
+    "fields": {
+      "action_time": "2023-06-26T17:39:31.044Z",
+      "user": 1,
+      "content_type": 11,
+      "object_id": "5",
+      "object_repr": "Test",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 34,
+    "fields": {
+      "action_time": "2023-06-26T17:39:53.811Z",
+      "user": 1,
+      "content_type": 11,
+      "object_id": "6",
+      "object_repr": "test2",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 35,
+    "fields": {
+      "action_time": "2023-06-26T17:40:08.370Z",
+      "user": 1,
+      "content_type": 11,
+      "object_id": "7",
+      "object_repr": "test3",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 36,
+    "fields": {
+      "action_time": "2023-06-26T17:40:29.488Z",
+      "user": 1,
+      "content_type": 11,
+      "object_id": "8",
+      "object_repr": "test4",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 37,
+    "fields": {
+      "action_time": "2023-06-26T17:41:00.664Z",
+      "user": 1,
+      "content_type": 6,
+      "object_id": "10",
+      "object_repr": "test5@gmail.com",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 38,
+    "fields": {
+      "action_time": "2023-06-26T17:41:31.118Z",
+      "user": 1,
+      "content_type": 7,
+      "object_id": "5",
+      "object_repr": "Один раз",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 39,
+    "fields": {
+      "action_time": "2023-06-26T17:42:00.298Z",
+      "user": 1,
+      "content_type": 7,
+      "object_id": "6",
+      "object_repr": "раз в день",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 40,
+    "fields": {
+      "action_time": "2023-06-26T17:42:22.064Z",
+      "user": 1,
+      "content_type": 7,
+      "object_id": "7",
+      "object_repr": "раз в неделю",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 41,
+    "fields": {
+      "action_time": "2023-06-26T17:42:36.237Z",
+      "user": 1,
+      "content_type": 7,
+      "object_id": "8",
+      "object_repr": "раз в месяц",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 42,
+    "fields": {
+      "action_time": "2023-06-26T17:42:50.877Z",
+      "user": 1,
+      "content_type": 8,
+      "object_id": "8",
+      "object_repr": "раз в день",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 43,
+    "fields": {
+      "action_time": "2023-06-26T17:43:00.420Z",
+      "user": 1,
+      "content_type": 8,
+      "object_id": "9",
+      "object_repr": "раз в неделю",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 44,
+    "fields": {
+      "action_time": "2023-06-26T17:43:07.972Z",
+      "user": 1,
+      "content_type": 8,
+      "object_id": "10",
+      "object_repr": "раз в месяц",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "auth.group",
+    "pk": 1,
+    "fields": {
+      "name": "moder",
+      "permissions": [
+        24,
+        41,
+        32,
+        43,
+        42,
+        40
+      ]
+    }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 1,
+    "fields": {
+      "app_label": "admin",
+      "model": "logentry"
+    }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 2,
+    "fields": {
+      "app_label": "auth",
+      "model": "permission"
+    }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 3,
+    "fields": {
+      "app_label": "auth",
+      "model": "group"
+    }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 4,
+    "fields": {
+      "app_label": "contenttypes",
+      "model": "contenttype"
+    }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 5,
+    "fields": {
+      "app_label": "sessions",
+      "model": "session"
+    }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 6,
+    "fields": {
+      "app_label": "main",
+      "model": "customer"
+    }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 7,
+    "fields": {
+      "app_label": "main",
+      "model": "message"
+    }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 8,
+    "fields": {
+      "app_label": "main",
+      "model": "sending"
+    }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 9,
+    "fields": {
+      "app_label": "main",
+      "model": "attempt"
+    }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 10,
+    "fields": {
+      "app_label": "users",
+      "model": "user"
+    }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 11,
+    "fields": {
+      "app_label": "blog",
+      "model": "post"
+    }
+  },
+  {
+    "model": "sessions.session",
+    "pk": "0u8flkqt3ieightmu497shg20dare9om",
+    "fields": {
+      "session_data": ".eJxVjEEOwiAQRe_C2pABHBCX7j0DGZipVA1NSrsy3l2bdKHb_977L5VoXWpau8xpZHVWRh1-t0zlIW0DfKd2m3SZ2jKPWW-K3mnX14nledndv4NKvX5rlGMEAwOJ8TZYAcwFETgYCY68nNghsylOSCC6HFxB8jkMYmO0IOr9AdwGN_c:1qCctT:cXIxKoRqH7xwsirC-UZV3cmTL2IeCia3peVnXz5qV1E",
+      "expire_date": "2023-07-07T09:15:51.268Z"
+    }
+  },
+  {
+    "model": "sessions.session",
+    "pk": "5jxpt0prn2r1s14sgi8bs590e3hsch1v",
+    "fields": {
+      "session_data": ".eJxVjEEOwiAQRe_C2pABHBCX7j0DGZipVA1NSrsy3l2bdKHb_977L5VoXWpau8xpZHVWRh1-t0zlIW0DfKd2m3SZ2jKPWW-K3mnX14nledndv4NKvX5rlGMEAwOJ8TZYAcwFETgYCY68nNghsylOSCC6HFxB8jkMYmO0IOr9AdwGN_c:1qCjWy:RiPNYQWGaJr2smvnnRiUilj6W7VIDI3zae0Bs7k95zQ",
+      "expire_date": "2023-07-07T16:21:04.990Z"
+    }
+  },
+  {
+    "model": "sessions.session",
+    "pk": "gasvg7flc9w7x3i0kzpg63lwc3mbext3",
+    "fields": {
+      "session_data": ".eJxVjEEOwiAQRe_C2pABHBCX7j0DGZipVA1NSrsy3l2bdKHb_977L5VoXWpau8xpZHVWRh1-t0zlIW0DfKd2m3SZ2jKPWW-K3mnX14nledndv4NKvX5rlGMEAwOJ8TZYAcwFETgYCY68nNghsylOSCC6HFxB8jkMYmO0IOr9AdwGN_c:1qD3oC:MoY1C5e5IISzT0BQzYyxjgmPmL54zMubXB4LfwCTxvo",
+      "expire_date": "2023-07-08T14:00:12.260Z"
+    }
+  },
+  {
+    "model": "sessions.session",
+    "pk": "hx69ctly201vqyfe7l5smjrd1vktzp0g",
+    "fields": {
+      "session_data": ".eJxVjEEOwiAQRe_C2pABHBCX7j0DGZipVA1NSrsy3l2bdKHb_977L5VoXWpau8xpZHVWRh1-t0zlIW0DfKd2m3SZ2jKPWW-K3mnX14nledndv4NKvX5rlGMEAwOJ8TZYAcwFETgYCY68nNghsylOSCC6HFxB8jkMYmO0IOr9AdwGN_c:1qCRXh:rvrNe-zL2wAr4cUEaOHjEII-vQsYLQ-H_VuGIgFtlFw",
+      "expire_date": "2023-07-06T21:08:37.124Z"
+    }
+  },
+  {
+    "model": "sessions.session",
+    "pk": "ijbze12bz9rel2f9256qo4vsg88am4h9",
+    "fields": {
+      "session_data": ".eJxVjMEOwiAQRP-FsyGw2xTw6N1vIAssUjWQlPbU-O-2SQ96m8x7M5vwtC7Fr51nPyVxFSguv12g-OJ6gPSk-mgytrrMU5CHIk_a5b0lft9O9--gUC_72hHCgBisg7THoDEyAisIAxJD1tFlMzIko61yeXQxq9FkcKQBbUTx-QLU3zdt:1qCd3A:xa2snHOCAsnJ1D_tghyD8BrVIdf_ePW30enrhiIq6OI",
+      "expire_date": "2023-07-07T09:25:52.247Z"
+    }
+  },
+  {
+    "model": "sessions.session",
+    "pk": "lqml941hy9iveu9dlkt9da47bfx6at7d",
+    "fields": {
+      "session_data": ".eJxVjEEOwiAQRe_C2pABHBCX7j0DGZipVA1NSrsy3l2bdKHb_977L5VoXWpau8xpZHVWRh1-t0zlIW0DfKd2m3SZ2jKPWW-K3mnX14nledndv4NKvX5rlGMEAwOJ8TZYAcwFETgYCY68nNghsylOSCC6HFxB8jkMYmO0IOr9AdwGN_c:1qCKc5:jnpPXqOBVL0JZEujJtGeRxWI857i03DZCgXVgNcRlUI",
+      "expire_date": "2023-07-06T13:44:41.244Z"
+    }
+  },
+  {
+    "model": "sessions.session",
+    "pk": "u3eyrw0txncm364nuksluxg9tkp8wtrt",
+    "fields": {
+      "session_data": ".eJxVjDsOwyAQBe9CHSG-JqRM7zOgZVmCkwgkY1dR7m5bcpG0b2behwVYlxLWTnOYErsxwy6_WwR8UT1AekJ9NI6tLvMU-aHwk3Y-tkTv--n-HRToZa9RoFU5GqklgFCacnbGaLSert5LNAIUWSA7QEYJkZxMQ4oOlENUiOy7AfNHONg:1qCRBD:_FdLpGTsHZYvulUKlJEenj1C4NN-dMHjI_3yv3R5RhA",
+      "expire_date": "2023-07-06T20:45:23.440Z"
+    }
+  },
+  {
+    "model": "sessions.session",
+    "pk": "xayj02l8evbpelmxdpq7px1f1xvlttzv",
+    "fields": {
+      "session_data": ".eJxVjEEOwiAQRe_C2pABHBCX7j0DGZipVA1NSrsy3l2bdKHb_977L5VoXWpau8xpZHVWRh1-t0zlIW0DfKd2m3SZ2jKPWW-K3mnX14nledndv4NKvX5rlGMEAwOJ8TZYAcwFETgYCY68nNghsylOSCC6HFxB8jkMYmO0IOr9AdwGN_c:1qDq6Y:b_YX6RB43hyJLAtVHi6euO1q03t-LSiC7VZphlOodnA",
+      "expire_date": "2023-07-10T17:34:22.068Z"
+    }
+  },
+  {
+    "model": "sessions.session",
+    "pk": "xgewk9gdoeq34x0ayrl31yac5dd181ht",
+    "fields": {
+      "session_data": ".eJxVjEEOwiAQRe_C2pABHBCX7j0DGZipVA1NSrsy3l2bdKHb_977L5VoXWpau8xpZHVWRh1-t0zlIW0DfKd2m3SZ2jKPWW-K3mnX14nledndv4NKvX5rlGMEAwOJ8TZYAcwFETgYCY68nNghsylOSCC6HFxB8jkMYmO0IOr9AdwGN_c:1qCmqA:zSJVUAW1VXi8pL8ypsUArbYvTvxN0H8GA1xH60T46NA",
+      "expire_date": "2023-07-07T19:53:06.206Z"
+    }
+  },
+  {
+    "model": "main.customer",
+    "pk": 7,
+    "fields": {
+      "name": "Maksim Petrov",
+      "email": "test1@gmail.com",
+      "comment": "test1@gmail.comtest1@gmail.comtest1@gmail.comtest1@gmail.comtest1@gmail.comtest1@gmail.comtest1@gmail.com",
+      "created_by": 1,
+      "is_active": true
+    }
+  },
+  {
+    "model": "main.customer",
+    "pk": 8,
+    "fields": {
+      "name": "Maksim Petrov-2",
+      "email": "test2@gmail.com",
+      "comment": "test2@gmail.comtest2@gmail.comtest2@gmail.comtest2@gmail.comtest2@gmail.comtest2@gmail.comtest2@gmail.comtest2@gmail.comtest2@gmail.com",
+      "created_by": 1,
+      "is_active": true
+    }
+  },
+  {
+    "model": "main.customer",
+    "pk": 9,
+    "fields": {
+      "name": "Maksim Petrov-3",
+      "email": "test-3@gmail.com",
+      "comment": "test-3@gmail.comtest-3@gmail.comtest-3@gmail.comtest-3@gmail.comtest-3@gmail.comtest-3@gmail.comtest-3@gmail.com",
+      "created_by": 1,
+      "is_active": true
+    }
+  },
+  {
+    "model": "main.customer",
+    "pk": 10,
+    "fields": {
+      "name": "Maksim Petrov-5",
+      "email": "test5@gmail.com",
+      "comment": "test5@gmail.comtest5@gmail.comtest5@gmail.comtest5@gmail.comtest5@gmail.comtest5@gmail.com",
+      "created_by": 1,
+      "is_active": true
+    }
+  },
+  {
+    "model": "main.message",
+    "pk": 5,
+    "fields": {
+      "subject": "Один раз",
+      "body": "Отправка Один раз",
+      "created_at": "2023-06-26T17:41:31.116Z"
+    }
+  },
+  {
+    "model": "main.message",
+    "pk": 6,
+    "fields": {
+      "subject": "раз в день",
+      "body": "Отправка раз в день",
+      "created_at": "2023-06-26T17:42:00.296Z"
+    }
+  },
+  {
+    "model": "main.message",
+    "pk": 7,
+    "fields": {
+      "subject": "раз в неделю",
+      "body": "Отправка раз в неделю",
+      "created_at": "2023-06-26T17:42:22.061Z"
+    }
+  },
+  {
+    "model": "main.message",
+    "pk": 8,
+    "fields": {
+      "subject": "раз в месяц",
+      "body": "Отправка раз в месяц",
+      "created_at": "2023-06-26T17:42:36.234Z"
+    }
+  },
+  {
+    "model": "main.sending",
+    "pk": 8,
+    "fields": {
+      "message": 6,
+      "created_at": "2023-06-26T17:42:50.874Z",
+      "scheduled_time": "17:42:50.874",
+      "frequency": "1 раз в день",
+      "status": "Создана",
+      "created": 1
+    }
+  },
+  {
+    "model": "main.sending",
+    "pk": 9,
+    "fields": {
+      "message": 7,
+      "created_at": "2023-06-26T17:43:00.417Z",
+      "scheduled_time": "17:43:00.417",
+      "frequency": "1 раз в неделю",
+      "status": "Создана",
+      "created": 1
+    }
+  },
+  {
+    "model": "main.sending",
+    "pk": 10,
+    "fields": {
+      "message": 8,
+      "created_at": "2023-06-26T17:43:07.970Z",
+      "scheduled_time": "17:43:07.970",
+      "frequency": "1 раз в месяц",
+      "status": "Создана",
+      "created": 1
+    }
+  },
+  {
+    "model": "users.user",
+    "pk": 1,
+    "fields": {
+      "password": "pbkdf2_sha256$600000$eNRDg1I6eRLpPcHR3NXb5X$gc0+SejnKg7ZN4wJJs9VOCL+IiK0T2K7KJeQTW+m6Vw=",
+      "last_login": "2023-06-26T17:34:22.063Z",
+      "is_superuser": true,
+      "first_name": "",
+      "last_name": "",
+      "is_staff": true,
+      "date_joined": "2023-06-22T11:35:07.500Z",
+      "email": "javoprav@gmail.com",
+      "token": null,
+      "token_time": "2023-06-22T11:35:08.055Z",
+      "is_active": true,
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "blog.post",
+    "pk": 5,
+    "fields": {
+      "title": "Test",
+      "slug": "test",
+      "content": "TestTestTestTestTestTestTest",
+      "preview": "blog/Hd-Nature-1280x720_aBVx4zK.jpg",
+      "created_at": "2023-06-26T17:39:31.041Z",
+      "published": true,
+      "views_count": 0,
+      "created_by": 1
+    }
+  },
+  {
+    "model": "blog.post",
+    "pk": 6,
+    "fields": {
+      "title": "test2",
+      "slug": "test2",
+      "content": "test2test2test2test2test2test2",
+      "preview": "",
+      "created_at": "2023-06-26T17:39:53.808Z",
+      "published": true,
+      "views_count": 0,
+      "created_by": 1
+    }
+  },
+  {
+    "model": "blog.post",
+    "pk": 7,
+    "fields": {
+      "title": "test3",
+      "slug": "test3",
+      "content": "test3test3test3test3test3test3test3",
+      "preview": "",
+      "created_at": "2023-06-26T17:40:08.369Z",
+      "published": true,
+      "views_count": 0,
+      "created_by": 1
+    }
+  },
+  {
+    "model": "blog.post",
+    "pk": 8,
+    "fields": {
+      "title": "test4",
+      "slug": "test4",
+      "content": "test4test4test4test4test4test4test4test4",
+      "preview": "blog/Hd-Nature-1280x720_oW0l56f.jpg",
+      "created_at": "2023-06-26T17:40:29.486Z",
+      "published": true,
+      "views_count": 0,
+      "created_by": 1
+    }
+  }
+]
