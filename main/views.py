@@ -1,5 +1,6 @@
 from random import sample
 
+import django
 from django.shortcuts import render, reverse, get_object_or_404, redirect
 from django.urls import reverse_lazy
 from django.views.generic import ListView, DetailView, CreateView, UpdateView, DeleteView, TemplateView
@@ -113,7 +114,12 @@ class SendingCreateView(LoginRequiredMixin, CreateView):
     model = Sending
     fields = ('message', 'frequency', 'status', 'created')
     success_url = reverse_lazy('main:sending_list')
-    send_email(Sending.ONCE)
+    try:
+        for send in Sending.objects.all():
+            if send.status == Sending.CREATED:
+                send_email(Sending.ONCE)
+    except django.db.utils.ProgrammingError:
+        print('ProgrammingError')
 
 
 class SendingUpdateView(LoginRequiredMixin, UpdateView):

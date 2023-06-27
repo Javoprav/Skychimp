@@ -46,6 +46,10 @@ CREATE DATABASE skychimp;
 11. Записать в файл настройки, как в .env.sample
 
 12. Применить миграции
+
+```bash
+python manage.py migrate users
+```
 ```bash
 python manage.py migrate
 ```

@@ -4,6 +4,7 @@ from django.views.generic import ListView, DetailView, CreateView, UpdateView, D
 from django.urls import reverse_lazy
 from blog.models import Post
 from django.http import Http404
+from blog.services import blog_cache
 
 
 class PostListView(LoginRequiredMixin, ListView):
@@ -24,10 +25,11 @@ class PostDetailView(DetailView):
 
     def get_context_data(self, **kwargs):
         context_data = super().get_context_data(**kwargs)
-        context_data['title'] = self.get_object()
+        context_data['title'] = context_data['object']
         obj = self.get_object()
         increase = get_object_or_404(Post, pk=obj.pk)
         increase.increase_views()
+        context_data['post'] = blog_cache(object)
         return context_data
 
 
