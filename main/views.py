@@ -112,7 +112,7 @@ class SendingDetailView(LoginRequiredMixin, DetailView):
 
 class SendingCreateView(LoginRequiredMixin, CreateView):
     model = Sending
-    fields = ('message', 'frequency', 'status', 'created')
+    fields = ('message', 'frequency', 'status', 'created', 'scheduled_time', 'start_date', 'end_date', )
     success_url = reverse_lazy('main:sending_list')
     try:
         for send in Sending.objects.all():

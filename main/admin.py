@@ -10,8 +10,8 @@ class CustomerAdmin(admin.ModelAdmin):
 
 @admin.register(Sending)
 class SendingAdmin(admin.ModelAdmin):
-    list_display = ('message', 'created_at', 'scheduled_time', 'frequency', 'status',)
-    list_filter = ('created_at', 'scheduled_time', 'frequency', 'status',)
+    list_display = ('message', 'scheduled_time', 'frequency', 'status',)
+    list_filter = ('scheduled_time', 'frequency', 'status',)
 
 
 @admin.register(Message)

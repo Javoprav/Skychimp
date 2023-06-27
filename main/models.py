@@ -1,3 +1,4 @@
+from datetime import date, datetime
 from django.db import models
 
 NULLABLE = {'null': True, 'blank': True}
@@ -56,8 +57,9 @@ class Sending(models.Model):
     ]
 
     message = models.ForeignKey(Message, on_delete=models.CASCADE, verbose_name='Сообщение')
-    created_at = models.DateTimeField(auto_now_add=True)
-    scheduled_time = models.TimeField(auto_now_add=True, verbose_name='Время рассылки')
+    scheduled_time = models.TimeField(default=datetime.now, verbose_name='Время рассылки')
+    start_date = models.DateField(default=date.today, verbose_name='Дата начала')
+    end_date = models.DateField(default=date.today, verbose_name='Дата окончания')
     frequency = models.CharField(max_length=14, choices=FREQUENCY_CHOICES, verbose_name='Периодичность')
     status = models.CharField(max_length=50, default='Создана', choices=SELECT_STATUS, verbose_name='Статус')
     created = models.ForeignKey('users.User',  on_delete=models.CASCADE, verbose_name='Кем создано',
